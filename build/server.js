@@ -1317,7 +1317,7 @@ const port = process.env.PORT || 3001;
 /* harmony export (immutable) */ __webpack_exports__["a"] = port;
 
 // export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
-const host = process.env.WEBSITE_HOSTNAME || 'https://appsync-server.nativescript.org';
+const host = process.env.WEBSITE_HOSTNAME || 'https://appsync-server.tyltgoapp.com';
 /* harmony export (immutable) */ __webpack_exports__["d"] = host;
 
 
@@ -1334,8 +1334,8 @@ const analytics = {
 
 const common = {
   api: {
-    URL: 'https://appsync-server.nativescript.org', // production code-push-server address
-    devURL: 'https://appsync-server.nativescript.org' // development code-push-server address
+    URL: process.env.PROD_SERVER_URL || 'https://appsync-server.tyltgoapp.com', // production code-push-server address
+    devURL: process.env.DEV_SERVER_URL || 'https://appsync-server.tyltgoapp.com' // development code-push-server address
   }
 };
 /* harmony export (immutable) */ __webpack_exports__["c"] = common;
