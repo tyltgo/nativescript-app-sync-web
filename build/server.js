@@ -915,6 +915,8 @@ function modifyPassword(oldPassword, newPassword) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_history__ = __webpack_require__(22);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Link/Link.js';
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 /**
@@ -965,12 +967,22 @@ class Link extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           props = _objectWithoutProperties(_props, ['to', 'children']);
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'a',
-      _extends({ href: to }, props, { onClick: this.handleClick }),
+      _extends({ href: to }, props, { onClick: this.handleClick, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }),
       children
     );
   }
 }
 
+Link.propTypes = {
+  to: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired,
+  children: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].node.isRequired,
+  onClick: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func
+};
 Link.defaultProps = {
   onClick: null
 };
@@ -998,10 +1010,10 @@ class RestApi {
   constructor() {
     if (instance) return instance;
     instance = this;
-    if (false) {
-      this.baseURI = _.get(common, 'api.devURL', 'http://localhost:3000');
+    if (true) {
+      this.baseURI = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(__WEBPACK_IMPORTED_MODULE_2__config__["c" /* common */], 'api.devURL', 'http://localhost:3000');
     } else {
-      this.baseURI = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(__WEBPACK_IMPORTED_MODULE_2__config__["c" /* common */], 'api.URL', 'http://localhost:3000');
+      this.baseURI = _.get(common, 'api.URL', 'http://localhost:3000');
     }
     this.headers = { 'Accept': 'application/json', 'Content-Type': 'application/json' };
     this.dealResponse = this.dealResponse.bind(this);
@@ -1139,7 +1151,7 @@ class RestApi {
   dealResponse(response) {
     var self = this;
     return response.text().then(text => {
-      if (false) {
+      if (true) {
         console.log(self.headers);
         console.log(response.url);
         console.log(text);
@@ -1285,8 +1297,7 @@ function closeMsg(id) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Layout_css__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Layout_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Layout_css__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Layout/Layout.js';
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -1300,10 +1311,26 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-function Layout(props) {
-  return _jsx('div', {}, void 0, props.children);
+class Layout extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      },
+      this.props.children
+    );
+  }
 }
 
+Layout.propTypes = {
+  children: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].node.isRequired
+};
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default()(__WEBPACK_IMPORTED_MODULE_2__Layout_css___default.a)(Layout));
 
 /***/ }),
@@ -1358,7 +1385,7 @@ const common = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Footer__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Layout__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__MsgStackContainer__ = __webpack_require__(60);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/LayoutContainer.js';
 
 
 
@@ -1368,18 +1395,43 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_5__components_Footer__["a" /* default */], {});
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_7__MsgStackContainer__["a" /* default */], {});
 
 class LayoutContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     const { auth, actions } = this.props;
-    return _jsx(__WEBPACK_IMPORTED_MODULE_6__components_Layout__["a" /* default */], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_4__components_Header__["a" /* default */], {
-      isAuth: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(auth, 'isAuth')
-    }), this.props.children, _ref, _ref2);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_6__components_Layout__["a" /* default */],
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Header__["a" /* default */], {
+        isAuth: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(auth, 'isAuth'),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }),
+      this.props.children,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Footer__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__MsgStackContainer__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      })
+    );
   }
 }
 
@@ -1531,7 +1583,7 @@ function fetchDeployments(appName) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Footer_css__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Footer_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Footer_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Footer/Footer.js';
 
 
 
@@ -1539,24 +1591,74 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 function Footer() {
-  return _jsx('footer', {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.root
-  }, void 0, _jsx('div', {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.container
-  }, void 0, _jsx('span', {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.text
-  }, void 0, '\xA9 NativeScript AppSync'), _jsx('span', {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.spacer
-  }, void 0, '\xB7'), _jsx(__WEBPACK_IMPORTED_MODULE_3__Link__["a" /* default */], {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.link,
-    to: '/'
-  }, void 0, 'Home'), _jsx('span', {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.spacer
-  }, void 0, '\xB7'), _jsx('a', {
-    className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.link,
-    target: '_blank',
-    href: 'https://github.com/EddyVerbruggen/nativescript-app-sync-server/issues/new'
-  }, void 0, 'Report an issue')));
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'footer',
+    { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.root, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.container, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'span',
+        { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.text, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          },
+          __self: this
+        },
+        '\xA9 NativeScript AppSync'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'span',
+        { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.spacer, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12
+          },
+          __self: this
+        },
+        '\xB7'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3__Link__["a" /* default */],
+        { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.link, to: '/', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 13
+          },
+          __self: this
+        },
+        'Home'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'span',
+        { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.spacer, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14
+          },
+          __self: this
+        },
+        '\xB7'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { className: __WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a.link, target: '_blank', href: 'https://github.com/EddyVerbruggen/nativescript-app-sync-server/issues/new', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+          },
+          __self: this
+        },
+        'Report an issue'
+      )
+    )
+  );
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default()(__WEBPACK_IMPORTED_MODULE_2__Footer_css___default.a)(Footer));
@@ -1578,7 +1680,7 @@ function Footer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Header_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Header_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Link__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Navigation__ = __webpack_require__(46);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Header/Header.js';
 
 
 
@@ -1587,27 +1689,79 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-var _ref = _jsx('span', {}, void 0, 'NativeScript AppSync');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"].Toggle, {});
 
 class Header extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
   render() {
-    return _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"], {
-      style: { fontWeight: 400 },
-      inverse: true,
-      collapseOnSelect: true
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"].Header, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"].Brand, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_5__Link__["a" /* default */], {
-      className: __WEBPACK_IMPORTED_MODULE_4__Header_css___default.a.brand,
-      to: '/'
-    }, void 0, _ref)), _ref2), __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.get(this.props, 'noNav') !== true ? _jsx(__WEBPACK_IMPORTED_MODULE_6__Navigation__["a" /* default */], {
-      isAuth: __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.get(this.props, 'isAuth')
-    }) : null);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"],
+      { style: { fontWeight: 400 }, inverse: true, collapseOnSelect: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"].Header,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"].Brand,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_5__Link__["a" /* default */],
+            { className: __WEBPACK_IMPORTED_MODULE_4__Header_css___default.a.brand, to: '/', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 29
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 30
+                },
+                __self: this
+              },
+              'NativeScript AppSync'
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Navbar"].Toggle, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          },
+          __self: this
+        })
+      ),
+      __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.get(this.props, 'noNav') !== true ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Navigation__["a" /* default */], { isAuth: __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.get(this.props, 'isAuth'), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }) : null
+    );
   }
 }
 
+Header.propTypes = {
+  isAuth: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  noNav: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool
+};
 Header.defaultProps = {
   isAuth: false,
   noNav: false
@@ -1649,7 +1803,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_productsActions__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/apps/index.js';
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -1663,6 +1817,8 @@ const apps = {
   path: '/apps',
 
   action({ store }) {
+    var _this = this;
+
     return _asyncToGenerator(function* () {
       if (false) {
         setTimeout(function () {
@@ -1675,7 +1831,23 @@ const apps = {
       return {
         title: 'Manage apps',
         chunk: 'apps',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(ProductListContainer, {}))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            },
+            __self: _this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ProductListContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            },
+            __self: _this
+          })
+        )
       };
     })();
   }
@@ -1686,6 +1858,8 @@ const deployments = {
   path: '/apps/:appName/:deploymentName',
 
   action({ store, params }) {
+    var _this2 = this;
+
     return _asyncToGenerator(function* () {
       if (false) {
         // setTimeout(() => {
@@ -1700,10 +1874,22 @@ const deployments = {
       return {
         title: `${deploymentName} ${appName}`,
         chunk: 'deployment',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(DeploymentContainer, {
-          appName: appName,
-          deploymentName: deploymentName
-        }))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            },
+            __self: _this2
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DeploymentContainer, { appName: appName, deploymentName: deploymentName, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 42
+            },
+            __self: _this2
+          })
+        )
       };
     })();
   }
@@ -1713,6 +1899,8 @@ const appDetails = {
   path: '/apps/:appName',
 
   action({ store, params }) {
+    var _this3 = this;
+
     return _asyncToGenerator(function* () {
       var appName = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(params, 'appName');
       if (false) {
@@ -1726,9 +1914,22 @@ const appDetails = {
       return {
         title: `${appName} 详情`,
         chunk: 'product',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(ProductContainer, {
-          appName: appName
-        }))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 61
+            },
+            __self: _this3
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ProductContainer, { appName: appName, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 61
+            },
+            __self: _this3
+          })
+        )
       };
     })();
   }
@@ -1754,8 +1955,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_authActions__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions_routesActions__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_ChangePassword__ = __webpack_require__(38);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/ChangePasswordContainer.js';
 
 
 
@@ -1782,7 +1982,7 @@ class ChangePasswordContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Compo
     const { password, actions } = this.props;
     let oldPassword = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(password, 'oldPassword');
     let newPassword = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(password, 'newPassword');
-    return _jsx(__WEBPACK_IMPORTED_MODULE_7__components_ChangePassword__["a" /* default */], {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_ChangePassword__["a" /* default */], {
       isFetching: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(password, 'isFetching'),
       oldPassword: oldPassword,
       oldPasswordInputChange: actions.passwordChangeOldInput,
@@ -1791,7 +1991,12 @@ class ChangePasswordContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Compo
       newPasswordConfirm: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(password, 'newPasswordConfirm'),
       newPasswordConfirmInputChange: actions.passwordChangeNewConfirmInput,
       submit: () => actions.modifyPassword(oldPassword, newPassword),
-      error: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(password, 'error')
+      error: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(password, 'error'),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
     });
   }
 }
@@ -1823,7 +2028,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions_usersActions__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_routesActions__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Home__ = __webpack_require__(41);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/HomeContainer.js';
 
 
 
@@ -1831,15 +2036,15 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_5__components_Home__["a" /* default */], {
-  html: '<h1>NativeScript AppSync service</h1>\n' + '<p>After <a href="./login">logging in</a>, you can...</p>\n' + '<h4><a href="./accessKeys">go here to get an access key</a></h4>\n' + '<h4><a href="./apps">or go here to manage your apps</a></h4>\n' + '<h1>Enjoy! 🚀</h1>'
-});
 
 class HomeContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
-    return _ref;
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Home__["a" /* default */], { html: '<h1>NativeScript AppSync service</h1>\n' + '<p>After <a href="./login">logging in</a>, you can...</p>\n' + '<h4><a href="./accessKeys">go here to get an access key</a></h4>\n' + '<h4><a href="./apps">or go here to manage your apps</a></h4>\n' + '<h1>Enjoy! 🚀</h1>', __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    });
   }
 }
 
@@ -1915,7 +2120,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_LogoutContainer__ = __webpack_require__(59);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/login/index.js';
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -1927,6 +2132,8 @@ const login = {
   path: '/login',
 
   action({ store }) {
+    var _this = this;
+
     return _asyncToGenerator(function* () {
       if (false) {}
       const LoginContainer = yield new Promise(function(resolve) { resolve(); }).then((function (require) {
@@ -1935,24 +2142,56 @@ const login = {
       return {
         title: 'Log in',
         chunk: 'login',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {}, void 0, _jsx(LoginContainer, {}))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 16
+            },
+            __self: _this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(LoginContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 16
+            },
+            __self: _this
+          })
+        )
       };
     })();
   }
 
 };
 
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2__containers_LogoutContainer__["a" /* default */], {}));
-
 const logout = {
 
   path: '/logout',
 
   action() {
+    var _this2 = this;
+
     return _asyncToGenerator(function* () {
       return {
         title: 'Log out',
-        component: _ref
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            },
+            __self: _this2
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__containers_LogoutContainer__["a" /* default */], {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            },
+            __self: _this2
+          })
+        )
       };
     })();
   }
@@ -1971,7 +2210,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__ = __webpack_require__(17);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/users/index.js';
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -1983,6 +2222,8 @@ const users = {
   path: '/users',
 
   action({ store }) {
+    var _this = this;
+
     return _asyncToGenerator(function* () {
       if (false) {}
       const ChangePasswordContainer = yield new Promise(function(resolve) { resolve(); }).then((function (require) {
@@ -1991,7 +2232,23 @@ const users = {
       return {
         title: 'Change password',
         chunk: 'changePassword',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(ChangePasswordContainer, {}))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            },
+            __self: _this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ChangePasswordContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            },
+            __self: _this
+          })
+        )
       };
     })();
   }
@@ -2003,6 +2260,8 @@ const settings = {
   path: '/users/settings',
 
   action({ store }) {
+    var _this2 = this;
+
     return _asyncToGenerator(function* () {
       if (false) {}
       const ChangePasswordContainer = yield new Promise(function(resolve) { resolve(); }).then((function (require) {
@@ -2011,7 +2270,23 @@ const settings = {
       return {
         title: 'Change password',
         chunk: 'changePassword',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(ChangePasswordContainer, {}))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            },
+            __self: _this2
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ChangePasswordContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            },
+            __self: _this2
+          })
+        )
       };
     })();
   }
@@ -2095,7 +2370,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__store_configureStore__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__store_configureStore___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__store_configureStore__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__config__ = __webpack_require__(16);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/server.js',
+    _this = this;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -2144,7 +2420,7 @@ app.use(__WEBPACK_IMPORTED_MODULE_2_cookie_parser___default()());
 app.use(__WEBPACK_IMPORTED_MODULE_3_body_parser___default.a.urlencoded({ extended: true }));
 app.use(__WEBPACK_IMPORTED_MODULE_3_body_parser___default.a.json());
 
-if (false) {
+if (true) {
   app.enable('trust proxy');
 }
 
@@ -2185,9 +2461,16 @@ app.get('*', (() => {
       }
 
       const data = _extends({}, route);
-      data.children = __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToString(_jsx(__WEBPACK_IMPORTED_MODULE_8__components_App___default.a, {
-        context: context
-      }, void 0, route.component));
+      data.children = __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToString(__WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_8__components_App___default.a,
+        { context: context, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 83
+          },
+          __self: _this
+        },
+        route.component
+      ));
       data.styles = [{ id: 'css', cssText: [...css].join('') }];
       data.scripts = [__WEBPACK_IMPORTED_MODULE_13__assets_json___default.a.vendor.js, __WEBPACK_IMPORTED_MODULE_13__assets_json___default.a.client.js];
       data.state = context.store.getState();
@@ -2195,7 +2478,13 @@ app.get('*', (() => {
         data.scripts.push(__WEBPACK_IMPORTED_MODULE_13__assets_json___default.a[route.chunk].js);
       }
 
-      const html = __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_Html__["a" /* default */], data));
+      const html = __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__components_Html__["a" /* default */], _extends({}, data, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: _this
+      })));
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     } catch (err) {
@@ -2218,13 +2507,25 @@ pe.skipPackage('express');
 app.use((err, req, res, next) => {
   // eslint-disable-line no-unused-vars
   console.log(pe.render(err)); // eslint-disable-line no-console
-  const html = __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToStaticMarkup(_jsx(__WEBPACK_IMPORTED_MODULE_9__components_Html__["a" /* default */], {
-    title: 'Internal Server Error',
-    description: err.message,
-    styles: [{ id: 'css', cssText: __WEBPACK_IMPORTED_MODULE_11__routes_error_ErrorPage_css___default.a._getCss() }]
-  }, void 0, __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToString(_jsx(__WEBPACK_IMPORTED_MODULE_10__routes_error_ErrorPage__["a" /* ErrorPageWithoutStyle */], {
-    error: err
-  }))));
+  const html = __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_9__components_Html__["a" /* default */],
+    {
+      title: 'Internal Server Error',
+      description: err.message,
+      styles: [{ id: 'css', cssText: __WEBPACK_IMPORTED_MODULE_11__routes_error_ErrorPage_css___default.a._getCss() }] // eslint-disable-line no-underscore-dangle
+      , __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114
+      },
+      __self: _this
+    },
+    __WEBPACK_IMPORTED_MODULE_5_react_dom_server___default.a.renderToString(__WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__routes_error_ErrorPage__["a" /* ErrorPageWithoutStyle */], { error: err, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 119
+      },
+      __self: _this
+    }))
+  ));
   res.status(err.status || 500);
   res.send(`<!doctype html>${html}`);
 });
@@ -2458,7 +2759,7 @@ function registerClean() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Link__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__MyEditor__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__PopShowKey__ = __webpack_require__(35);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/AccessKeys/AccessKeys.js';
 
 
 
@@ -2469,10 +2770,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-  active: true
-}, void 0, 'Your access keys:'));
 
 class AccessKeys extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -2484,19 +2781,107 @@ class AccessKeys extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   renderRow(rowData, index) {
     const self = this;
     const moment = __webpack_require__(124);
-    return _jsx('tr', {}, __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'id'), _jsx('td', {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_7__MyEditor__["a" /* default */], {
-      saveData: str => {
-        if (!__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.eq(str, __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'))) {
-          self.props.patchKey(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'), str);
-        }
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'tr',
+      { key: __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'id'), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
       },
-      value: __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName')
-    })), _jsx('td', {}, void 0, __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'createdBy')), _jsx('td', {}, void 0, __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'isSession') ? 'session' : 'accessKey'), _jsx('td', {}, void 0, moment(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'createdTime')).fromNow()), _jsx('td', {}, void 0, moment(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'expires')).fromNow()), _jsx('td', {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      onClick: () => {
-        self.props.removeKey(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'));
-      },
-      bsStyle: 'danger'
-    }, void 0, 'Delete')));
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__MyEditor__["a" /* default */], {
+          saveData: str => {
+            if (!__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.eq(str, __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'))) {
+              self.props.patchKey(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'), str);
+            }
+          },
+          value: __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          },
+          __self: this
+        })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'createdBy')
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'isSession') ? 'session' : 'accessKey'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59
+          },
+          __self: this
+        },
+        moment(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'createdTime')).fromNow()
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60
+          },
+          __self: this
+        },
+        moment(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'expires')).fromNow()
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+          {
+            onClick: () => {
+              self.props.removeKey(__WEBPACK_IMPORTED_MODULE_5_lodash___default.a.get(rowData, 'friendlyName'));
+            },
+            bsStyle: 'danger',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 62
+            },
+            __self: this
+          },
+          'Delete'
+        )
+      )
+    );
   }
 
   render() {
@@ -2505,45 +2890,211 @@ class AccessKeys extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     if (this.props.isFetching) {
       tipText = 'Loading data...';
     }
-    return _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_3__AccessKeys_css___default.a.root
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_8__PopShowKey__["a" /* default */], {
-      showModal: this.props.isShowKey,
-      value: this.props.token,
-      close: this.props.close
-    }), _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_3__AccessKeys_css___default.a.container
-    }, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Col"], {
-      style: { marginBottom: '20px' }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      onClick: () => {
-        self.props.createKey();
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_3__AccessKeys_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
       },
-      bsStyle: 'primary',
-      disabled: !!this.props.isCreating
-    }, void 0, 'Create key')), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"], {
-      striped: true,
-      bordered: true,
-      condensed: true,
-      hover: true,
-      responsive: true
-    }, void 0, _jsx('thead', {}, void 0, _jsx('tr', {}, void 0, _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Name'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Creator'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Type'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Created'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Expiration'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Actions'))), _jsx('tbody', {}, void 0, this.props.rs.length > 0 ? __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.map(this.props.rs, (item, index) => self.renderRow(item, index)) : _jsx('tr', {}, void 0, _jsx('td', {
-      colSpan: '6'
-    }, void 0, tipText))))));
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__PopShowKey__["a" /* default */], {
+        showModal: this.props.isShowKey,
+        value: this.props.token,
+        close: this.props.close,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_3__AccessKeys_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 86
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 87
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 88
+              },
+              __self: this
+            },
+            'Your access keys:'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Col"],
+          { style: { marginBottom: '20px' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 92
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+            {
+              onClick: () => {
+                self.props.createKey();
+              },
+              bsStyle: 'primary',
+              disabled: !!this.props.isCreating,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 93
+              },
+              __self: this
+            },
+            'Create key'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"],
+          { striped: true, bordered: true, condensed: true, hover: true, responsive: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 103
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'thead',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 104
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 105
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 106
+                  },
+                  __self: this
+                },
+                'Name'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 107
+                  },
+                  __self: this
+                },
+                'Creator'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 108
+                  },
+                  __self: this
+                },
+                'Type'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 109
+                  },
+                  __self: this
+                },
+                'Created'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 110
+                  },
+                  __self: this
+                },
+                'Expiration'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 111
+                  },
+                  __self: this
+                },
+                'Actions'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'tbody',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 114
+              },
+              __self: this
+            },
+            this.props.rs.length > 0 ? __WEBPACK_IMPORTED_MODULE_5_lodash___default.a.map(this.props.rs, (item, index) => self.renderRow(item, index)) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 119
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                { colSpan: '6', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 120
+                  },
+                  __self: this
+                },
+                tipText
+              )
+            )
+          )
+        )
+      )
+    );
   }
 }
+AccessKeys.propTypes = {
+  isFetching: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  rs: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].array,
+  removeKey: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  patchKey: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  isCreating: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  createKey: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  isShowKey: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  close: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  token: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string
+};
 AccessKeys.defaultProps = {
   isFetching: true,
   rs: [],
@@ -2566,16 +3117,10 @@ AccessKeys.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/AccessKeys/PopShowKey/PopShowKey.js';
 
 
 
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Header, {
-  closeButton: true
-}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Title, {}, void 0, 'Key created successfully'));
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["HelpBlock"], {}, void 0, 'Copy the above key, then close me');
 
 class PopShowKey extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -2589,29 +3134,111 @@ class PopShowKey extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
 
   render() {
-    return _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"], {
-      show: this.props.showModal,
-      onHide: this.close
-    }, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Body, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-      validationState: 'success'
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      value: this.props.value,
-      onFocus: event => {
-        event.target.select();
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"],
+      { show: this.props.showModal, onHide: this.close, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
       },
-      onClick: event => {
-        event.target.select();
-      },
-      onMouseOver: event => {
-        event.target.select();
-      },
-      readOnly: true,
-      type: 'text'
-    }), _ref2)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Footer, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      onClick: this.close
-    }, void 0, 'Close')));
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Header,
+        { closeButton: true, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Title,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 31
+            },
+            __self: this
+          },
+          'Key created successfully'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Body,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+          { validationState: 'success', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 34
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
+            value: this.props.value,
+            onFocus: event => {
+              event.target.select();
+            },
+            onClick: event => {
+              event.target.select();
+            },
+            onMouseOver: event => {
+              event.target.select();
+            },
+            readOnly: true,
+            type: 'text',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            },
+            __self: this
+          }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["HelpBlock"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 49
+              },
+              __self: this
+            },
+            'Copy the above key, then close me'
+          )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Footer,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+          { onClick: this.close, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 53
+            },
+            __self: this
+          },
+          'Close'
+        )
+      )
+    );
   }
 }
+PopShowKey.propTypes = {
+  value: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  close: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  showModal: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool
+};
 PopShowKey.defaultProps = {
   value: '',
   showModal: false,
@@ -2635,8 +3262,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__network_RestApi__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_authActions__ = __webpack_require__(10);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/App/App.prod.js';
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -2713,13 +3339,34 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.PureComponent {
     const store = this.props.context.store;
     // NOTE: If you need to add or modify header, footer etc. of the app,
     // please do that inside the Layout component.
-    return _jsx(__WEBPACK_IMPORTED_MODULE_1_react_redux__["Provider"], {
-      store: store
-    }, void 0, _jsx('div', {}, void 0, __WEBPACK_IMPORTED_MODULE_0_react__["Children"].only(this.props.children)));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_react_redux__["Provider"],
+      { store: store, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 86
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react__["Children"].only(this.props.children)
+      )
+    );
   }
 
 }
 
+App.propTypes = {
+  context: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].shape(ContextType).isRequired,
+  children: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].element.isRequired
+};
 App.childContextTypes = ContextType;
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
@@ -2744,18 +3391,12 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/ChangePassword/ChangePassword.js';
 
 
 
 
 
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"], {}, void 0, 'Old password');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"], {}, void 0, 'New password');
-
-var _ref3 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"], {}, void 0, 'Confirm new password');
 
 class ChangePassword extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -2800,53 +3441,256 @@ class ChangePassword extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     if (!this.props.isFetching && isValidate) {
       disabled = false;
     }
-    return _jsx('div', {
-      style: { height: 650, paddingLeft: 20, paddingRight: 20 }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Panel"], {
-      header: 'Change password',
-      style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Form"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      onChange: this.setOldPassword,
-      type: 'password',
-      value: this.props.oldPassword,
-      placeholder: 'Old password',
-      onBlur: () => this.setState({ field1: true }),
-      autoFocus: true
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, this.state.field1 ? oldPasswordTips : null)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _ref2, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      onChange: this.setNewPassword,
-      type: 'password',
-      value: this.props.newPassword,
-      placeholder: 'New password',
-      onBlur: () => this.setState({ field2: true })
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, this.state.field2 ? newPasswordTips : null)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _ref3, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      onChange: this.setNewPasswordConfirm,
-      type: 'password',
-      value: this.props.newPasswordConfirm,
-      placeholder: 'Repeat the new password',
-      onBlur: () => this.setState({ field3: true })
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, this.state.field3 ? newPasswordConfirmTips : null)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 20 }
-    }, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.get(this.props, 'error.message'))), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      style: { width: "100%" },
-      bsStyle: 'primary',
-      disabled: disabled,
-      onClick: () => {
-        if (disabled) {
-          return;
-        }
-        self.props.submit();
-      }
-    }, void 0, 'Confirm')))));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { style: { height: 650, paddingLeft: 20, paddingRight: 20 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Panel"],
+        { header: 'Change password', style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Form"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 85
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 86
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"],
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 87
+                },
+                __self: this
+              },
+              'Old password'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
+              onChange: this.setOldPassword,
+              type: 'password',
+              value: this.props.oldPassword,
+              placeholder: 'Old password',
+              onBlur: () => this.setState({ field1: true }),
+              autoFocus: true,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 88
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 97
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { style: { color: 'red' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 98
+                },
+                __self: this
+              },
+              this.state.field1 ? oldPasswordTips : null
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 106
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"],
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 107
+                },
+                __self: this
+              },
+              'New password'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
+              onChange: this.setNewPassword,
+              type: 'password',
+              value: this.props.newPassword,
+              placeholder: 'New password',
+              onBlur: () => this.setState({ field2: true }),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 108
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 116
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { style: { color: 'red' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 117
+                },
+                __self: this
+              },
+              this.state.field2 ? newPasswordTips : null
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 125
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"],
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 126
+                },
+                __self: this
+              },
+              'Confirm new password'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
+              onChange: this.setNewPasswordConfirm,
+              type: 'password',
+              value: this.props.newPasswordConfirm,
+              placeholder: 'Repeat the new password',
+              onBlur: () => this.setState({ field3: true }),
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 127
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 135
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { style: { color: 'red' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 136
+                },
+                __self: this
+              },
+              this.state.field3 ? newPasswordConfirmTips : null
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            { style: { paddingTop: 20 }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 144
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { style: { color: 'red' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 145
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_2_lodash___default.a.get(this.props, 'error.message')
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 149
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+              {
+                style: { width: "100%" },
+                bsStyle: 'primary',
+                disabled: disabled,
+                onClick: () => {
+                  if (disabled) {
+                    return;
+                  }
+                  self.props.submit();
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 150
+                },
+                __self: this
+              },
+              'Confirm'
+            )
+          )
+        )
+      )
+    );
   }
 }
+ChangePassword.propTypes = {
+  isFetching: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  oldPassword: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  oldPasswordInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  newPassword: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  newPasswordInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  newPasswordConfirm: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  newPasswordConfirmInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  submit: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  error: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].object
+};
 ChangePassword.defaultProps = {
   isFetching: false,
   oldPassword: '',
@@ -2942,6 +3786,14 @@ class Countdown extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Countdown;
 
+Countdown.propTypes = {
+  leftTime: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number,
+  timeoutCb: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  renderFunc: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func.isRequired,
+  renderRetryFunc: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func.isRequired,
+  level: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number,
+  second: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number
+};
 Countdown.retryTimes = 0;
 Countdown.defaultProps = {
   leftTime: 0,
@@ -2970,7 +3822,7 @@ Countdown.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Deployment_css__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Deployment_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__Deployment_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Deployment/Deployment.js';
 
 
 
@@ -2979,14 +3831,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-  active: true
-}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */], {
-  to: '/apps'
-}, void 0, 'Apps'));
-
-var _ref2 = _jsx('tbody', {}, void 0);
 
 class Deployment extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -2997,33 +3841,164 @@ class Deployment extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     const self = this;
     const tipText = 'No data';
-    return _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_5__Deployment_css___default.a.root
-    }, void 0, _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_5__Deployment_css___default.a.container
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"], {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-      active: true
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */], {
-      to: `/apps/${this.props.appName}`
-    }, void 0, this.props.appName)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-      active: true
-    }, void 0, this.props.deploymentName)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"], {
-      striped: true,
-      bordered: true,
-      condensed: true,
-      hover: true,
-      responsive: true
-    }, void 0, _jsx('thead', {}, void 0, _jsx('tr', {}, void 0, _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'AppVersion'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'PackageInfo'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Install Metrics'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Actions'))), _ref2)));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_5__Deployment_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_5__Deployment_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */],
+              { to: '/apps', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 34
+                },
+                __self: this
+              },
+              'Apps'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 36
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */],
+              { to: `/apps/${this.props.appName}`, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 37
+                },
+                __self: this
+              },
+              this.props.appName
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 39
+              },
+              __self: this
+            },
+            this.props.deploymentName
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"],
+          { striped: true, bordered: true, condensed: true, hover: true, responsive: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'thead',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 44
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 45
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 46
+                  },
+                  __self: this
+                },
+                'AppVersion'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 47
+                  },
+                  __self: this
+                },
+                'PackageInfo'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 48
+                  },
+                  __self: this
+                },
+                'Install Metrics'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
+                  },
+                  __self: this
+                },
+                'Actions'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('tbody', {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 52
+            },
+            __self: this
+          })
+        )
+      )
+    );
   }
 }
+Deployment.propTypes = {
+  appName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  deploymentName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string
+};
 Deployment.defaultProps = {
   appName: '',
   deploymentName: ''
@@ -3041,7 +4016,7 @@ Deployment.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Home_css__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Home_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Home_css__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Home/Home.js';
 
 
 
@@ -3049,13 +4024,30 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
-    return _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_2__Home_css___default.a.root
-    }, void 0, _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_2__Home_css___default.a.container
-    }, void 0, _jsx('div', {
-      dangerouslySetInnerHTML: { __html: this.props.html || '' }
-    })));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_2__Home_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_2__Home_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { dangerouslySetInnerHTML: { __html: this.props.html || '' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 11
+          },
+          __self: this
+        })
+      )
+    );
   }
 }
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default()(__WEBPACK_IMPORTED_MODULE_2__Home_css___default.a)(Home));
@@ -3070,8 +4062,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_serialize_javascript__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_serialize_javascript___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_serialize_javascript__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config__ = __webpack_require__(16);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Html.js';
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -3085,68 +4076,156 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-var _ref = _jsx('meta', {
-  charSet: 'utf-8'
-});
+class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
-var _ref2 = _jsx('meta', {
-  httpEquiv: 'x-ua-compatible',
-  content: 'ie=edge'
-});
-
-var _ref3 = _jsx('meta', {
-  name: 'viewport',
-  content: 'width=device-width, initial-scale=1'
-});
-
-var _ref4 = _jsx('link', {
-  rel: 'apple-touch-icon',
-  href: 'apple-touch-icon.png'
-});
-
-var _ref5 = _jsx('link', {
-  rel: 'stylesheet',
-  href: '/css/bootstrap.min.css'
-});
-
-var _ref6 = _jsx('script', {
-  src: 'https://www.google-analytics.com/analytics.js',
-  async: true,
-  defer: true
-});
-
-function Html(props) {
-  const { title, description, styles, scripts, state, children } = props;
-  return _jsx('html', {
-    className: 'no-js',
-    lang: 'en'
-  }, void 0, _jsx('head', {}, void 0, _ref, _ref2, _jsx('title', {}, void 0, title), _jsx('meta', {
-    name: 'description',
-    content: description
-  }), _ref3, _ref4, _ref5, styles.map(style => _jsx('style', {
-    id: style.id,
-    dangerouslySetInnerHTML: { __html: style.cssText }
-  }, style.id))), _jsx('body', {
-    style: { minHeight: '100%' }
-  }, void 0, _jsx('div', {
-    id: 'app',
-    dangerouslySetInnerHTML: { __html: children }
-  }), state && _jsx('script', {
-    dangerouslySetInnerHTML: { __html: `window.APP_STATE=${__WEBPACK_IMPORTED_MODULE_1_serialize_javascript___default()(state, { isJSON: true })}` }
-  }), scripts.map(script => _jsx('script', {
-    src: script
-  }, script)), __WEBPACK_IMPORTED_MODULE_2__config__["b" /* analytics */].google.trackingId && _jsx('script', {
-    dangerouslySetInnerHTML: { __html: 'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' + `ga('create','${__WEBPACK_IMPORTED_MODULE_2__config__["b" /* analytics */].google.trackingId}','auto');ga('send','pageview')` }
-  }), __WEBPACK_IMPORTED_MODULE_2__config__["b" /* analytics */].google.trackingId && _ref6));
+  render() {
+    const { title, description, styles, scripts, state, children } = this.props;
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'html',
+      { className: 'no-js', lang: 'en', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'head',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { charSet: 'utf-8', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          },
+          __self: this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { httpEquiv: 'x-ua-compatible', content: 'ie=edge', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40
+          },
+          __self: this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'title',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 41
+            },
+            __self: this
+          },
+          title
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { name: 'description', content: description, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          },
+          __self: this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'apple-touch-icon', href: 'apple-touch-icon.png', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          },
+          __self: this
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'stylesheet', href: '/css/bootstrap.min.css', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
+          },
+          __self: this
+        }),
+        styles.map(style => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('style', {
+          key: style.id,
+          id: style.id
+          // eslint-disable-next-line react/no-danger
+          , dangerouslySetInnerHTML: { __html: style.cssText },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        }))
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'body',
+        { style: { minHeight: '100%' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+          id: 'app'
+          // eslint-disable-next-line react/no-danger
+          , dangerouslySetInnerHTML: { __html: children },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          },
+          __self: this
+        }),
+        state && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML: { __html: `window.APP_STATE=${__WEBPACK_IMPORTED_MODULE_1_serialize_javascript___default()(state, { isJSON: true })}` },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          },
+          __self: this
+        }),
+        scripts.map(script => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { key: script, src: script, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 68
+          },
+          __self: this
+        })),
+        __WEBPACK_IMPORTED_MODULE_2__config__["b" /* analytics */].google.trackingId && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML: { __html: 'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' + `ga('create','${__WEBPACK_IMPORTED_MODULE_2__config__["b" /* analytics */].google.trackingId}','auto');ga('send','pageview')` },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70
+          },
+          __self: this
+        }),
+        __WEBPACK_IMPORTED_MODULE_2__config__["b" /* analytics */].google.trackingId && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://www.google-analytics.com/analytics.js', async: true, defer: true, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78
+          },
+          __self: this
+        })
+      )
+    );
+  }
 }
 
+Html.propTypes = {
+  title: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired,
+  description: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired,
+  styles: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].arrayOf(__WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].shape({
+    id: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired,
+    cssText: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired
+  }).isRequired),
+  scripts: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].arrayOf(__WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired),
+  // eslint-disable-next-line react/forbid-prop-types
+  state: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].object,
+  children: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired
+};
 Html.defaultProps = {
   styles: [],
   scripts: [],
   state: null
 };
-
-
 /* harmony default export */ __webpack_exports__["a"] = (Html);
 
 /***/ }),
@@ -3161,20 +4240,11 @@ Html.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Login/Login.js';
 
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"], {}, void 0, 'Email address');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"], {}, void 0, 'Password');
-
-var _ref3 = _jsx(__WEBPACK_IMPORTED_MODULE_3__Link__["a" /* default */], {
-  to: '/register'
-}, void 0, 'Register');
 
 class Login extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   constructor() {
@@ -3199,38 +4269,183 @@ class Login extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
 
   render() {
-    return _jsx('div', {
-      style: { height: 650, paddingLeft: 20, paddingRight: 20 }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Panel"], {
-      header: 'Log in',
-      style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Form"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
-      onChange: this.setInputAccount,
-      value: this.props.account,
-      type: 'email',
-      placeholder: 'Email address',
-      autoFocus: true
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _ref2, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
-      onChange: this.setInputPassword,
-      value: this.props.password,
-      type: 'password',
-      placeholder: 'Password'
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 20 }
-    }, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.errorMessage'))), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"], {
-      style: { width: "100%" },
-      bsStyle: 'primary',
-      onClick: this.submit,
-      disabled: this.props.isFetching
-    }, void 0, this.props.isFetching ? 'Logging in...' : 'Log in')), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 28 }
-    }, void 0, _jsx('span', {
-      style: { marginRight: 20 }
-    }, void 0, 'No account yet?'), _ref3))));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { style: { height: 650, paddingLeft: 20, paddingRight: 20 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Panel"],
+        { header: 'Log in', style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Form"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 59
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 60
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"],
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 61
+                },
+                __self: this
+              },
+              'Email address'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
+              onChange: this.setInputAccount,
+              value: this.props.account,
+              type: 'email',
+              placeholder: 'Email address',
+              autoFocus: true,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 62
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 70
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"],
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 71
+                },
+                __self: this
+              },
+              'Password'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
+              onChange: this.setInputPassword,
+              value: this.props.password,
+              type: 'password',
+              placeholder: 'Password',
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 72
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+            { style: { paddingTop: 20 }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 79
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { style: { color: 'red' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 80
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.errorMessage')
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 84
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"],
+              {
+                style: { width: "100%" },
+                bsStyle: 'primary',
+                onClick: this.submit,
+                disabled: this.props.isFetching,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 85
+                },
+                __self: this
+              },
+              this.props.isFetching ? 'Logging in...' : 'Log in'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+            { style: { paddingTop: 28 }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 94
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              { style: { marginRight: 20 }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 95
+                },
+                __self: this
+              },
+              'No account yet?'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_3__Link__["a" /* default */],
+              { to: '/register', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 96
+                },
+                __self: this
+              },
+              'Register'
+            )
+          )
+        )
+      )
+    );
   }
 }
+Login.propTypes = {
+  isFetching: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  account: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  password: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  accountInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  passwordInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  submit: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  error: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].object
+};
 Login.defaultProps = {
   isFetching: false,
   account: '',
@@ -3253,8 +4468,7 @@ Login.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/MsgStack/MsgStack.js';
 
 
 
@@ -3306,22 +4520,41 @@ class MsgStack extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
   render() {
     const self = this;
-    return _jsx('div', {}, void 0, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.map(self.props.items, function (item) {
-      var bsStyle = "info";
-      if (__WEBPACK_IMPORTED_MODULE_1_lodash___default.a.indexOf(["info", "warning", "danger", "success"], item.type) !== -1) {
-        bsStyle = item.type;
-      }
-      return _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Alert"], {
-        style: { marginTop: -15 },
-        bsStyle: bsStyle,
-        onDismiss: () => {
-          self.props.close(item.id);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.map(self.props.items, function (item) {
+        var bsStyle = "info";
+        if (__WEBPACK_IMPORTED_MODULE_1_lodash___default.a.indexOf(["info", "warning", "danger", "success"], item.type) !== -1) {
+          bsStyle = item.type;
         }
-      }, item.id, item.text);
-    }));
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Alert"],
+          { key: item.id, style: { marginTop: -15 }, bsStyle: bsStyle, onDismiss: () => {
+              self.props.close(item.id);
+            }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 71
+            },
+            __self: this
+          },
+          item.text
+        );
+      })
+    );
   }
 }
 
+MsgStack.propTypes = {
+  items: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].array,
+  close: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func
+};
 MsgStack.defaultProps = {
   items: [],
   close: () => {}
@@ -3339,7 +4572,7 @@ MsgStack.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_draft_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_draft_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/MyEditor/MyEditor.js';
 
 
 
@@ -3376,14 +4609,23 @@ class MyEditor extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     return false;
   }
   render() {
-    return _jsx(__WEBPACK_IMPORTED_MODULE_1_draft_js__["Editor"], {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_draft_js__["Editor"], {
       editorState: this.state.editorState,
       handleKeyCommand: this.handleKeyCommand,
       onChange: this.onChange,
-      onBlur: this.saveData
+      onBlur: this.saveData,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
     });
   }
 }
+MyEditor.propTypes = {
+  value: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  saveData: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func
+};
 MyEditor.defaultProps = {
   value: '',
   saveData: str => {}
@@ -3402,44 +4644,12 @@ MyEditor.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_history__ = __webpack_require__(22);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Navigation/Navigation.js';
 
 
 
 
 
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"], {
-  eventKey: 4,
-  href: '#'
-}, void 0, 'Log in');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"], {
-  eventKey: 5,
-  href: '#'
-}, void 0, 'Register');
-
-var _ref3 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavDropdown"], {
-  eventKey: 3,
-  title: 'Settings',
-  id: 'basic-nav-dropdown'
-}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["MenuItem"], {
-  eventKey: 3.1
-}, void 0, 'Change password'), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["MenuItem"], {
-  divider: true
-}), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["MenuItem"], {
-  eventKey: 3.2
-}, void 0, 'Log out'));
-
-var _ref4 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"], {
-  eventKey: 1,
-  href: '#'
-}, void 0, 'Manage apps');
-
-var _ref5 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"], {
-  eventKey: 2,
-  href: '#'
-}, void 0, 'Access keys');
 
 class Navigation extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -3465,18 +4675,119 @@ class Navigation extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
 
   render() {
-    let loginView = _ref;
-    let registerView = _ref2;
-    let personNav = _ref3;
-    return _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Navbar"].Collapse, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Nav"], {
-      onSelect: this.handleSelect
-    }, void 0, _ref4, _ref5), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Nav"], {
-      onSelect: this.handleSelect,
-      pullRight: true
-    }, void 0, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'isAuth') === true ? personNav : null, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'isAuth') !== true ? loginView : null, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'isAuth') !== true ? registerView : null));
+    let loginView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"],
+      { eventKey: 4, href: '#', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      },
+      'Log in'
+    );
+    let registerView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"],
+      { eventKey: 5, href: '#', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      },
+      'Register'
+    );
+    let personNav = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavDropdown"],
+      { eventKey: 3, title: 'Settings', id: 'basic-nav-dropdown', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["MenuItem"],
+        { eventKey: 3.1, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          },
+          __self: this
+        },
+        'Change password'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["MenuItem"], { divider: true, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["MenuItem"],
+        { eventKey: 3.2, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51
+          },
+          __self: this
+        },
+        'Log out'
+      )
+    );
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Navbar"].Collapse,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Nav"],
+        { onSelect: this.handleSelect, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"],
+          { eventKey: 1, href: '#', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 57
+            },
+            __self: this
+          },
+          'Manage apps'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["NavItem"],
+          { eventKey: 2, href: '#', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 58
+            },
+            __self: this
+          },
+          'Access keys'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Nav"],
+        { onSelect: this.handleSelect, pullRight: true, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'isAuth') === true ? personNav : null,
+        __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'isAuth') !== true ? loginView : null,
+        __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'isAuth') !== true ? registerView : null
+      )
+    );
   }
 }
 
+Navigation.propTypes = {
+  className: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  isAuth: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool
+};
 /* harmony default export */ __webpack_exports__["a"] = (Navigation);
 
 /***/ }),
@@ -3490,60 +4801,22 @@ class Navigation extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/PopAddApp/PopAddApp.js';
 
 
 
 
 
-const popoverFocus = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Popover"], {
-  id: 'popover-trigger-focus'
-}, void 0, '\u53EA\u80FD\u5305\u542B\u5B57\u6BCD\u548C\u6570\u5B57');
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Header, {
-  closeButton: true
-}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Title, {}, void 0, 'Add app'));
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"], {}, void 0, 'App name');
-
-var _ref3 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"].Feedback, {});
-
-var _ref4 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"], {}, void 0, 'Platform');
-
-var _ref5 = _jsx('option', {
-  value: ''
-}, void 0, 'Select platform');
-
-var _ref6 = _jsx('option', {
-  value: 'iOS'
-}, void 0, 'iOS');
-
-var _ref7 = _jsx('option', {
-  value: 'Android'
-}, void 0, 'Android');
-
-var _ref8 = _jsx('option', {
-  value: 'Windows'
-}, void 0, 'Windows');
-
-var _ref9 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"], {}, void 0, 'App framework');
-
-var _ref10 = _jsx('option', {
-  value: ''
-}, void 0, 'Select app framework');
-
-var _ref11 = _jsx('option', {
-  value: 'React-Native'
-}, void 0, 'React-Native');
-
-var _ref12 = _jsx('option', {
-  value: 'Cordova'
-}, void 0, 'Cordova');
-
-var _ref13 = _jsx('option', {
-  value: 'NativeScript'
-}, void 0, 'NativeScript \uD83D\uDE0E');
-
+const popoverFocus = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Popover"],
+  { id: 'popover-trigger-focus', __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  },
+  '\u53EA\u80FD\u5305\u542B\u5B57\u6BCD\u548C\u6570\u5B57'
+);
 class PopAddApp extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
   constructor() {
@@ -3592,45 +4865,304 @@ class PopAddApp extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
 
   render() {
-    return _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"], {
-      show: this.props.showModal,
-      onHide: this.close
-    }, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Body, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-      style: { display: 'inline-block', width: '40%' },
-      validationState: this.props.isShowNameError ? `error` : null
-    }, void 0, _ref2, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["OverlayTrigger"], {
-      trigger: ["hover"],
-      placement: 'bottom',
-      overlay: popoverFocus
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      type: 'text',
-      onChange: this.setName,
-      value: this.props.appName,
-      autoFocus: true
-    })), _ref3), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-      style: { display: 'inline-block', width: '20%', paddingLeft: 15 },
-      validationState: this.props.isShowOSError ? `error` : null
-    }, void 0, _ref4, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      componentClass: 'select',
-      value: this.props.os,
-      onChange: this.setSelect
-    }, void 0, _ref5, _ref6, _ref7, _ref8)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-      style: { display: 'inline-block', width: '20%', paddingLeft: 15 },
-      validationState: this.props.isShowPlatformError ? `error` : null
-    }, void 0, _ref9, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
-      componentClass: 'select',
-      value: this.props.platform,
-      onChange: this.setPlatformSelect
-    }, void 0, _ref10, _ref11, _ref12, _ref13)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-      validationState: 'error'
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["HelpBlock"], {}, void 0, this.props.errorTip))), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Footer, {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      onClick: this.close
-    }, void 0, 'Close'), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      onClick: this.onSubmit,
-      disabled: this.props.isOnSubmiting ? true : false
-    }, void 0, 'Save')));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"],
+      { show: this.props.showModal, onHide: this.close, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Header,
+        { closeButton: true, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Title,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 101
+            },
+            __self: this
+          },
+          'Add app'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Body,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+          { style: { display: 'inline-block', width: '40%' }, validationState: this.props.isShowNameError ? `error` : null, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 104
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 105
+              },
+              __self: this
+            },
+            'App name'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["OverlayTrigger"],
+            { trigger: ["hover"], placement: 'bottom', overlay: popoverFocus, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 106
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"], {
+              type: 'text',
+              onChange: this.setName,
+              value: this.props.appName,
+              autoFocus: true,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 107
+              },
+              __self: this
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"].Feedback, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 114
+            },
+            __self: this
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+          { style: { display: 'inline-block', width: '20%', paddingLeft: 15 }, validationState: this.props.isShowOSError ? `error` : null, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 116
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 117
+              },
+              __self: this
+            },
+            'Platform'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"],
+            {
+              componentClass: 'select',
+              value: this.props.os,
+              onChange: this.setSelect,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 118
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: '', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 123
+                },
+                __self: this
+              },
+              'Select platform'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'iOS', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 124
+                },
+                __self: this
+              },
+              'iOS'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'Android', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 125
+                },
+                __self: this
+              },
+              'Android'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'Windows', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 126
+                },
+                __self: this
+              },
+              'Windows'
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+          { style: { display: 'inline-block', width: '20%', paddingLeft: 15 }, validationState: this.props.isShowPlatformError ? `error` : null, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 129
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["ControlLabel"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 130
+              },
+              __self: this
+            },
+            'App framework'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormControl"],
+            {
+              componentClass: 'select',
+              value: this.props.platform,
+              onChange: this.setPlatformSelect,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 131
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: '', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 136
+                },
+                __self: this
+              },
+              'Select app framework'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'React-Native', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 137
+                },
+                __self: this
+              },
+              'React-Native'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'Cordova', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 138
+                },
+                __self: this
+              },
+              'Cordova'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'option',
+              { value: 'NativeScript', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 139
+                },
+                __self: this
+              },
+              'NativeScript \uD83D\uDE0E'
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+          { validationState: 'error', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 142
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["HelpBlock"],
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 143
+              },
+              __self: this
+            },
+            this.props.errorTip
+          )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Modal"].Footer,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 146
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+          { onClick: this.close, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 147
+            },
+            __self: this
+          },
+          'Close'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+          { onClick: this.onSubmit, disabled: this.props.isOnSubmiting ? true : false, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 148
+            },
+            __self: this
+          },
+          'Save'
+        )
+      )
+    );
   }
 }
+PopAddApp.propTypes = {
+  onSubmit: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  isOnSubmiting: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  close: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  input: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  errorTip: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  showModal: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  isShowNameError: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  isShowOSError: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  isShowPlatformError: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  os: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  platform: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  appName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string
+};
 PopAddApp.defaultProps = {
   onSubmit: name => {},
   isOnSubmiting: false,
@@ -3665,7 +5197,7 @@ PopAddApp.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Product_css__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Product_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__Product_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Product/Product.js';
 
 
 
@@ -3674,20 +5206,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-  active: true
-}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */], {
-  to: '/apps'
-}, void 0, 'Apps'));
-
-var _ref2 = _jsx('td', {});
-
-var _ref3 = _jsx('td', {});
-
-var _ref4 = _jsx('td', {});
-
-var _ref5 = _jsx('td', {});
 
 class Product extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -3699,44 +5217,259 @@ class Product extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     const self = this;
     const tipText = 'No data';
-    return _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_5__Product_css___default.a.root
-    }, void 0, _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_5__Product_css___default.a.container
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"], {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-      active: true
-    }, void 0, this.props.appName)), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"], {
-      striped: true,
-      bordered: true,
-      condensed: true,
-      hover: true,
-      responsive: true
-    }, void 0, _jsx('thead', {}, void 0, _jsx('tr', {}, void 0, _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Deployments'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'DeploymentKey'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Description'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Update Metadata'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Install Metrics'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Actions'))), _jsx('tbody', {}, void 0, this.props.items.length > 0 ? __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(this.props.items, (item, index) => self.renderRow(item, index)) : _jsx('tr', {}, void 0, _jsx('td', {
-      colSpan: '6'
-    }, void 0, tipText))))));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_5__Product_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_5__Product_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */],
+              { to: '/apps', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 34
+                },
+                __self: this
+              },
+              'Apps'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 36
+              },
+              __self: this
+            },
+            this.props.appName
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"],
+          { striped: true, bordered: true, condensed: true, hover: true, responsive: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 40
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'thead',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 41
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 42
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 43
+                  },
+                  __self: this
+                },
+                'Deployments'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 44
+                  },
+                  __self: this
+                },
+                'DeploymentKey'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 45
+                  },
+                  __self: this
+                },
+                'Description'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 46
+                  },
+                  __self: this
+                },
+                'Update Metadata'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 47
+                  },
+                  __self: this
+                },
+                'Install Metrics'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 48
+                  },
+                  __self: this
+                },
+                'Actions'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'tbody',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 51
+              },
+              __self: this
+            },
+            this.props.items.length > 0 ? __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(this.props.items, (item, index) => self.renderRow(item, index)) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 56
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                { colSpan: '6', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 57
+                  },
+                  __self: this
+                },
+                tipText
+              )
+            )
+          )
+        )
+      )
+    );
   }
 
   renderRow(rowData, index) {
     const deployName = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'name');
-    return _jsx('tr', {}, index, _jsx('td', {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */], {
-      to: `/apps/${this.props.appName}/${deployName}`
-    }, void 0, deployName)), _jsx('td', {
-      style: { textAlign: 'left' }
-    }, void 0, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'key')), _ref2, _ref3, _ref4, _ref5);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'tr',
+      { key: index, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */],
+          { to: `/apps/${this.props.appName}/${deployName}`, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 72
+            },
+            __self: this
+          },
+          deployName
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        { style: { textAlign: 'left' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'key')
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('td', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('td', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('td', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('td', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      })
+    );
   }
 }
+Product.propTypes = {
+  appName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  items: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].array
+};
 Product.defaultProps = {
   appName: '',
   items: []
@@ -3761,7 +5494,7 @@ Product.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ProductList_css__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__ProductList_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/ProductList/ProductList.js';
 
 
 
@@ -3770,12 +5503,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-var _ref = _jsx('td', {});
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item, {
-  active: true
-}, void 0, 'Apps'));
 
 class ProductList extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -3785,52 +5512,313 @@ class ProductList extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   }
   renderRow(rowData, index) {
     const appName = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'name');
-    return _jsx('tr', {}, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'name'), _jsx('td', {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */], {
-      to: `/apps/${appName}`
-    }, void 0, appName)), _jsx('td', {
-      style: { textAlign: 'left' }
-    }, void 0, _jsx('ul', {}, void 0, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(__WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'collaborators'), (item, email) => _jsx('li', {}, email, email, _jsx('span', {
-      className: __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.permission
-    }, void 0, '(', _jsx('em', {}, void 0, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(item, 'permission')), ')'), __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(item, 'isCurrentAccount') ? _jsx('span', {
-      className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.label, __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.labelSuccess)
-    }, void 0, 'it\'s you') : null)))), _jsx('td', {}, void 0, _jsx('ul', {}, void 0, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(__WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'deployments'), (item, email) => _jsx('li', {
-      style: item === 'Production' ? { color: 'green' } : null
-    }, email, _jsx(__WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */], {
-      to: `/apps/${appName}/${item}`
-    }, void 0, item))))), _ref);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'tr',
+      { key: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'name'), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */],
+          { to: `/apps/${appName}`, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            },
+            __self: this
+          },
+          appName
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        { style: { textAlign: 'left' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'ul',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(__WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'collaborators'), (item, email) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            { key: email, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 38
+              },
+              __self: this
+            },
+            email,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              { className: __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.permission, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 40
+                },
+                __self: this
+              },
+              '(',
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'em',
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                  },
+                  __self: this
+                },
+                __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(item, 'permission')
+              ),
+              ')'
+            ),
+            __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(item, 'isCurrentAccount') ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.label, __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.labelSuccess), __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 45
+                },
+                __self: this
+              },
+              'it\'s you'
+            ) : null
+          ))
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'td',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'ul',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 56
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(__WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(rowData, 'deployments'), (item, email) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'li',
+            { key: email, style: item === 'Production' ? { color: 'green' } : null, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 59
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_6__Link__["a" /* default */],
+              { to: `/apps/${appName}/${item}`, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 60
+                },
+                __self: this
+              },
+              item
+            )
+          ))
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('td', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      })
+    );
   }
 
   render() {
     const self = this;
     const tipText = 'No data';
-    return _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.root
-    }, void 0, _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.container
-    }, void 0, _ref2, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Col"], {
-      style: { marginBottom: '20px' }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"], {
-      onClick: this.props.popAddApp,
-      bsStyle: 'primary'
-    }, void 0, 'Add an app')), _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"], {
-      striped: true,
-      bordered: true,
-      condensed: true,
-      hover: true,
-      responsive: true
-    }, void 0, _jsx('thead', {}, void 0, _jsx('tr', {}, void 0, _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Name'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Member'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Deployments'), _jsx('th', {
-      style: { textAlign: 'center' }
-    }, void 0, 'Actions'))), _jsx('tbody', {}, void 0, this.props.rs.length > 0 ? __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(this.props.rs, (item, index) => self.renderRow(item, index)) : _jsx('tr', {}, void 0, _jsx('td', {
-      colSpan: '4'
-    }, void 0, tipText))))));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_5__ProductList_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 76
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 77
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Breadcrumb"].Item,
+            { active: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 78
+              },
+              __self: this
+            },
+            'Apps'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Col"],
+          { style: { marginBottom: '20px' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 82
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Button"],
+            {
+              onClick: this.props.popAddApp,
+              bsStyle: 'primary',
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 83
+              },
+              __self: this
+            },
+            'Add an app'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Table"],
+          { striped: true, bordered: true, condensed: true, hover: true, responsive: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 90
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'thead',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 91
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 92
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 93
+                  },
+                  __self: this
+                },
+                'Name'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 94
+                  },
+                  __self: this
+                },
+                'Member'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 95
+                  },
+                  __self: this
+                },
+                'Deployments'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'th',
+                { style: { textAlign: 'center' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 96
+                  },
+                  __self: this
+                },
+                'Actions'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'tbody',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 99
+              },
+              __self: this
+            },
+            this.props.rs.length > 0 ? __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.map(this.props.rs, (item, index) => self.renderRow(item, index)) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 104
+                },
+                __self: this
+              },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                { colSpan: '4', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 105
+                  },
+                  __self: this
+                },
+                tipText
+              )
+            )
+          )
+        )
+      )
+    );
   }
 }
+ProductList.propTypes = {
+  isFetching: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  rs: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].array,
+  popAddApp: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func
+};
 ProductList.defaultProps = {
   isFetching: true,
   rs: [],
@@ -3853,7 +5841,7 @@ ProductList.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_classnames__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_lodash__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/NavStep/NavStep.js';
 
 
 
@@ -3866,18 +5854,73 @@ class NavStep extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     let self = this;
     let navArr = [{ key: 1, text: 'Provide your email' }, { key: 2, text: 'Verify email' }, { key: 3, text: 'Set password' }, { key: 4, text: '🚀' }];
-    return _jsx('ul', {
-      className: __WEBPACK_IMPORTED_MODULE_3_classnames___default()(__WEBPACK_IMPORTED_MODULE_2__NavStep_css___default.a.progress, __WEBPACK_IMPORTED_MODULE_2__NavStep_css___default.a.clearfix)
-    }, void 0, __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.map(navArr, function (item, index) {
-      return _jsx('li', {
-        className: self.props.step == __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.get(item, 'key') ? __WEBPACK_IMPORTED_MODULE_2__NavStep_css___default.a.current : null
-      }, index, _jsx('i', {}, void 0, __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.get(item, 'key')), _jsx('span', {}, void 0, __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.get(item, 'text')), _jsx('em', {}, void 0, _jsx('img', {
-        src: __webpack_require__(93)
-      })));
-    }));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'ul',
+      { className: __WEBPACK_IMPORTED_MODULE_3_classnames___default()(__WEBPACK_IMPORTED_MODULE_2__NavStep_css___default.a.progress, __WEBPACK_IMPORTED_MODULE_2__NavStep_css___default.a.clearfix), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.map(navArr, function (item, index) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'li',
+          {
+            key: index,
+            className: self.props.step == __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.get(item, 'key') ? __WEBPACK_IMPORTED_MODULE_2__NavStep_css___default.a.current : null,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'i',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 33
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.get(item, 'key')
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'span',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_4_lodash___default.a.get(item, 'text')
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'em',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+              },
+              __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __webpack_require__(93), __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+              },
+              __self: this
+            })
+          )
+        );
+      })
+    );
   }
 }
 
+NavStep.propTypes = {
+  step: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number
+};
 NavStep.defaultProps = {
   step: 1
 };
@@ -3901,7 +5944,7 @@ NavStep.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__StepTwo__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__StepThree__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__StepDone__ = __webpack_require__(52);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/Register.js';
 
 
 
@@ -3911,9 +5954,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_8__StepDone__["a" /* default */], {});
 
 class Register extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -3925,15 +5965,20 @@ class Register extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     var stepView = null;
     let step = this.props.step;
     if (step == 1) {
-      stepView = _jsx(__WEBPACK_IMPORTED_MODULE_5__StepOne__["a" /* default */], {
+      stepView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__StepOne__["a" /* default */], {
         isChecking: this.props.isSubmitStepOne,
         email: this.props.email,
         emailInputChange: this.props.emailInputChange,
         submit: this.props.submitStepOne,
-        error: this.props.error
+        error: this.props.error,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
       });
     } else if (step == 2) {
-      stepView = _jsx(__WEBPACK_IMPORTED_MODULE_6__StepTwo__["a" /* default */], {
+      stepView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__StepTwo__["a" /* default */], {
         isChecking: this.props.isSubmitStepTwo,
         validateCode: this.props.validateCode,
         validateCodeInputChange: this.props.validateCodeInputChange,
@@ -3941,30 +5986,88 @@ class Register extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         lastSendTime: this.props.lastSendTime,
         sendValidateCode: this.props.sendValidateCode,
         submit: this.props.submitStepTwo,
-        error: this.props.error
+        error: this.props.error,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
       });
     } else if (step == 3) {
-      stepView = _jsx(__WEBPACK_IMPORTED_MODULE_7__StepThree__["a" /* default */], {
+      stepView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__StepThree__["a" /* default */], {
         isFetching: this.props.isSubmitStepThree,
         password: this.props.password,
         passwordInputChange: this.props.passwordInputChange,
         passwordConfirm: this.props.passwordConfirm,
         passwordConfirmInputChange: this.props.passwordConfirmInputChange,
         submit: this.props.submitStepThree,
-        error: this.props.error
+        error: this.props.error,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
       });
     } else if (step == 4) {
-      stepView = _ref;
+      stepView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__StepDone__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        },
+        __self: this
+      });
     }
-    return _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_3__Register_css___default.a.root
-    }, void 0, _jsx('div', {
-      className: __WEBPACK_IMPORTED_MODULE_3__Register_css___default.a.container
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_4__NavStep__["a" /* default */], {
-      step: step
-    }), stepView));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_3__Register_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 107
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_3__Register_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 108
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__NavStep__["a" /* default */], { step: step, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 109
+          },
+          __self: this
+        }),
+        stepView
+      )
+    );
   }
 }
+Register.propTypes = {
+  step: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number,
+  registerClean: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  //-----
+  email: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  emailInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  isSubmitStepOne: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  submitStepOne: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  //-----
+  validateCode: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  isSending: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  lastSendTime: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number,
+  sendValidateCode: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  validateCodeInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  isSubmitStepTwo: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  submitStepTwo: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  //-----
+  isSubmitStepThree: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  password: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  passwordInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  passwordConfirm: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  passwordConfirmInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  submitStepThree: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func
+};
 Register.defaultProps = {
   step: 1,
   registerClean: () => {},
@@ -4000,23 +6103,61 @@ Register.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/StepDone/StepDone.js';
 
 
 
-
-
-var _ref = _jsx('div', {}, void 0, _jsx('span', {}, void 0, 'Congrats! You have successfully registered \uD83D\uDE0A'), _jsx(__WEBPACK_IMPORTED_MODULE_2__Link__["a" /* default */], {
-  to: '/login',
-  style: 'font-weight: bold'
-}, void 0, 'Log in'));
 
 function StepDone() {
-  return _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Form"], {
-    style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }
-  }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"], {
-    style: { textAlign: 'center' }
-  }, void 0, _ref));
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["Form"],
+    { style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["FormGroup"],
+      { style: { textAlign: 'center' }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'span',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            },
+            __self: this
+          },
+          'Congrats! You have successfully registered \uD83D\uDE0A'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2__Link__["a" /* default */],
+          { to: '/login', style: 'font-weight: bold', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            },
+            __self: this
+          },
+          'Log in'
+        )
+      )
+    )
+  );
 }
 /* harmony default export */ __webpack_exports__["a"] = (StepDone);
 
@@ -4034,24 +6175,12 @@ function StepDone() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Link__ = __webpack_require__(12);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/StepOne/StepOne.js';
 
 
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["ControlLabel"], {}, void 0, 'Email address');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_4__Link__["a" /* default */], {
-  to: '/login'
-}, void 0, 'Existing account');
-
-var _ref3 = _jsx('a', {
-  href: 'https://github.com/EddyVerbruggen/nativescript-app-sync-web/blob/master/EULA.pdf',
-  target: '_blank'
-}, void 0, 'EULA');
 
 class StepOne extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -4070,36 +6199,157 @@ class StepOne extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     if (!this.props.isChecking && emailIsValidate) {
       disabled = false;
     }
-    return _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Form"], {
-      style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"], {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormControl"], {
-      onChange: this.setInputEmail,
-      value: this.props.email,
-      type: 'email',
-      placeholder: 'Email address',
-      autoComplete: 'off',
-      autoFocus: true
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 20 }
-    }, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.message'))), _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Button"], {
-      style: { width: "100%" },
-      bsStyle: 'primary',
-      onClick: () => {
-        if (disabled) {
-          return;
-        }
-        self.props.submit();
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Form"],
+      { style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
       },
-      disabled: disabled
-    }, void 0, 'Next step')), _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 28, textAlign: 'center' }
-    }, void 0, _ref2), _jsx(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"], {}, void 0, _jsx('label', {
-      style: { fontWeight: 300 }
-    }, void 0, 'This service is in BETA. By registering for this service, you agree with its ', _ref3, '.')));
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["ControlLabel"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 48
+            },
+            __self: this
+          },
+          'Email address'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormControl"], {
+          onChange: this.setInputEmail,
+          value: this.props.email,
+          type: 'email',
+          placeholder: 'Email address',
+          autoComplete: 'off',
+          autoFocus: true,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          },
+          __self: this
+        })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"],
+        { style: { paddingTop: 20 }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 58
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: { color: 'red' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 59
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.message')
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["Button"],
+          {
+            style: { width: "100%" },
+            bsStyle: 'primary',
+            onClick: () => {
+              if (disabled) {
+                return;
+              }
+              self.props.submit();
+            },
+            disabled: disabled,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 64
+            },
+            __self: this
+          },
+          'Next step'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"],
+        { style: { paddingTop: 28, textAlign: 'center' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_4__Link__["a" /* default */],
+          { to: '/login', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 79
+            },
+            __self: this
+          },
+          'Existing account'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'label',
+          { style: { fontWeight: 300 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 82
+            },
+            __self: this
+          },
+          'This service is in BETA. By registering for this service, you agree with its ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'a',
+            { href: 'https://github.com/EddyVerbruggen/nativescript-app-sync-web/blob/master/EULA.pdf', target: '_blank', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 82
+              },
+              __self: this
+            },
+            'EULA'
+          ),
+          '.'
+        )
+      )
+    );
   }
 }
+StepOne.propTypes = {
+  isChecking: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  email: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  emailInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  submit: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  error: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].object
+};
 StepOne.defaultProps = {
   isChecking: false,
   email: '',
@@ -4120,15 +6370,10 @@ StepOne.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/StepThree/StepThree.js';
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"], {}, void 0, 'Password');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"], {}, void 0, 'Confirm password');
 
 class StepThree extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -4167,44 +6412,184 @@ class StepThree extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     if (!this.props.isFetching && isValidate) {
       disabled = false;
     }
-    return _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Form"], {
-      style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
-      onChange: this.setInputPassword,
-      onBlur: () => this.setState({ field1: true }),
-      value: this.props.password,
-      type: 'password',
-      placeholder: 'Password',
-      autoComplete: 'off',
-      autoFocus: true
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, passwordTips)), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _ref2, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
-      onChange: this.setInputPasswordConfirm,
-      onBlur: () => this.setState({ field2: true }),
-      type: 'password',
-      value: this.props.passwordConfirm,
-      placeholder: 'Repeat your password',
-      autoComplete: 'off'
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, passwordConfirmTips)), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 20 }
-    }, void 0, _jsx('div', {
-      style: { color: 'red' }
-    }, void 0, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.message'))), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"], {
-      style: { width: "100%" },
-      bsStyle: 'primary',
-      onClick: () => {
-        if (disabled) {
-          return;
-        }
-        self.props.submit();
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Form"],
+      { style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
       },
-      disabled: disabled
-    }, void 0, 'Register')));
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 71
+            },
+            __self: this
+          },
+          'Password'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
+          onChange: this.setInputPassword,
+          onBlur: () => this.setState({ field1: true }),
+          value: this.props.password,
+          type: 'password',
+          placeholder: 'Password',
+          autoComplete: 'off',
+          autoFocus: true,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72
+          },
+          __self: this
+        })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 82
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: { color: 'red' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 83
+            },
+            __self: this
+          },
+          passwordTips
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 88
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["ControlLabel"],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 89
+            },
+            __self: this
+          },
+          'Confirm password'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
+          onChange: this.setInputPasswordConfirm,
+          onBlur: () => this.setState({ field2: true }),
+          type: 'password',
+          value: this.props.passwordConfirm,
+          placeholder: 'Repeat your password',
+          autoComplete: 'off',
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90
+          },
+          __self: this
+        })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: { color: 'red' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 100
+            },
+            __self: this
+          },
+          passwordConfirmTips
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        { style: { paddingTop: 20 }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: { color: 'red' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 105
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.message')
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 109
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"],
+          {
+            style: { width: "100%" },
+            bsStyle: 'primary',
+            onClick: () => {
+              if (disabled) {
+                return;
+              }
+              self.props.submit();
+            },
+            disabled: disabled,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 110
+            },
+            __self: this
+          },
+          'Register'
+        )
+      )
+    );
   }
 }
+StepThree.propTypes = {
+  isFetching: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  password: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  passwordInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  passwordConfirm: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  passwordConfirmInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  submit: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  error: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].object
+};
 StepThree.defaultProps = {
   isFetching: false,
   password: '',
@@ -4228,20 +6613,11 @@ StepThree.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Countdown__ = __webpack_require__(39);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/StepTwo/StepTwo.js';
 
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"], {
-  disabled: true
-}, void 0, '\u53D1\u9001\u4E2D');
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Alert"], {
-  bsStyle: 'warning'
-}, void 0, 'Check your verification code (make sure to check your SPAM folder!)'));
 
 class StepTwo extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
@@ -4268,12 +6644,19 @@ class StepTwo extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     if (!this.props.isChecking && isValidate) {
       disabled = false;
     }
-    let countDownView = _jsx(__WEBPACK_IMPORTED_MODULE_3__Countdown__["a" /* default */], {
+    let countDownView = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Countdown__["a" /* default */], {
       leftTime: leftTime < 0 ? 0 : leftTime,
       renderFunc: ({ second }) => {
-        return _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"], {
-          disabled: true
-        }, void 0, second);
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"],
+          { disabled: true, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 64
+            },
+            __self: this
+          },
+          second
+        );
       },
       renderRetryFunc: times => {
         let sendText = 'Send email';
@@ -4281,51 +6664,171 @@ class StepTwo extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
           sendText = 'Resend';
         }
         if (self.props.isSending) {
-          return _ref;
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"],
+            { disabled: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 72
+              },
+              __self: this
+            },
+            '\u53D1\u9001\u4E2D'
+          );
         }
-        return _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"], {
-          onClick: () => {
-            if (!self.props.isSending) {
-              self.props.sendValidateCode();
-            }
-          }
-        }, void 0, sendText);
-      }
-    });
-    return _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Form"], {
-      style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }
-    }, void 0, _ref2, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Col"], {
-      sm: 8,
-      style: { marginBottom: 10 }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
-      onChange: this.setInputValidateCode,
-      value: this.props.validateCode,
-      type: 'text',
-      placeholder: 'Enter the verification code',
-      autoComplete: 'off',
-      autoFocus: true
-    })), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Col"], {
-      sm: 4,
-      style: { marginBottom: 10 }
-    }, void 0, countDownView)), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {
-      style: { paddingTop: 20 }
-    }, void 0, _jsx('div', {
-      style: { color: 'red', paddingLeft: 15 }
-    }, void 0, __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.message'))), _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"], {
-      style: { textAlign: "center", paddingTop: 20 }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"], {
-      style: { width: "100%" },
-      bsStyle: 'primary',
-      onClick: () => {
-        if (disabled) {
-          return;
-        }
-        self.props.submit();
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"],
+          {
+            onClick: () => {
+              if (!self.props.isSending) {
+                self.props.sendValidateCode();
+              }
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 75
+            },
+            __self: this
+          },
+          sendText
+        );
       },
-      disabled: disabled
-    }, void 0, 'Next step')));
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    });
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Form"],
+      { style: { maxWidth: 350, marginLeft: "auto", marginRight: "auto" }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Alert"],
+          { bsStyle: 'warning', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 91
+            },
+            __self: this
+          },
+          'Check your verification code (make sure to check your SPAM folder!)'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Col"],
+          { sm: 8, style: { marginBottom: 10 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 96
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormControl"], {
+            onChange: this.setInputValidateCode,
+            value: this.props.validateCode,
+            type: 'text',
+            placeholder: 'Enter the verification code',
+            autoComplete: 'off',
+            autoFocus: true,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 97
+            },
+            __self: this
+          })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Col"],
+          { sm: 4, style: { marginBottom: 10 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 106
+            },
+            __self: this
+          },
+          countDownView
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        { style: { paddingTop: 20 }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 110
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: { color: 'red', paddingLeft: 15 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 111
+            },
+            __self: this
+          },
+          __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.get(this.props, 'error.message')
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["FormGroup"],
+        { style: { textAlign: "center", paddingTop: 20 }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 115
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["Button"],
+          {
+            style: { width: "100%" },
+            bsStyle: 'primary',
+            onClick: () => {
+              if (disabled) {
+                return;
+              }
+              self.props.submit();
+            },
+            disabled: disabled,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 116
+            },
+            __self: this
+          },
+          'Next step'
+        )
+      )
+    );
   }
 }
+StepTwo.propTypes = {
+  isChecking: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  validateCode: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  validateCodeInputChange: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  isSending: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].bool,
+  lastSendTime: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number,
+  sendValidateCode: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  submit: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func,
+  error: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].object
+};
 StepTwo.defaultProps = {
   isChecking: false,
   validateCode: '',
@@ -4356,8 +6859,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_authActions__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions_routesActions__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_AccessKeys__ = __webpack_require__(34);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/AccessKeysContainer.js';
 
 
 
@@ -4381,7 +6883,7 @@ class AccessKeysContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component
   }
   render() {
     const { accessKeys, actions } = this.props;
-    return _jsx(__WEBPACK_IMPORTED_MODULE_7__components_AccessKeys__["a" /* default */], {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_AccessKeys__["a" /* default */], {
       isFetching: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(accessKeys, 'isFetching'),
       rs: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(accessKeys, 'rs'),
       removeKey: actions.reomveAccessKey,
@@ -4390,7 +6892,12 @@ class AccessKeysContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component
       createKey: actions.createAccessKey,
       isShowKey: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(accessKeys, 'showKey.isOpen'),
       close: actions.closePopShowKey,
-      token: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(accessKeys, 'showKey.token')
+      token: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(accessKeys, 'showKey.token'),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
     });
   }
 }
@@ -4425,8 +6932,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_authActions__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions_routesActions__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Deployment__ = __webpack_require__(40);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/DeploymentContainer.js';
 
 
 
@@ -4451,13 +6957,19 @@ class DeploymentContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component
   }
   render() {
     const { appName, deploymentName, actions } = this.props;
-    return _jsx(__WEBPACK_IMPORTED_MODULE_7__components_Deployment__["a" /* default */], {
-      appName: appName,
-      deploymentName: deploymentName
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Deployment__["a" /* default */], { appName: appName, deploymentName: deploymentName, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
     });
   }
 }
 
+DeploymentContainer.propTypes = {
+  appName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string,
+  deploymentName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string
+};
 DeploymentContainer.defaultProps = {
   appName: '',
   deploymentName: ''
@@ -4496,7 +7008,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Login__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Header__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Footer__ = __webpack_require__(20);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/LoginContainer.js';
 
 
 
@@ -4507,11 +7019,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_7__components_Header__["a" /* default */], {});
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_8__components_Footer__["a" /* default */], {});
 
 class LoginContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   componentWillReceiveProps(newProps) {
@@ -4528,15 +7035,44 @@ class LoginContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
   render() {
     const { login, actions } = this.props;
-    return _jsx('div', {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_6__components_Login__["a" /* default */], {
-      isFetching: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'isFetching'),
-      account: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'account'),
-      password: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'password'),
-      accountInputChange: actions.loginChangeAccountInput,
-      passwordInputChange: actions.loginChangePasswordInput,
-      submit: () => actions.fetchLogin(__WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'account'), __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'password')),
-      error: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'error')
-    }), _ref2);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Header__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Login__["a" /* default */], {
+        isFetching: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'isFetching'),
+        account: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'account'),
+        password: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'password'),
+        accountInputChange: actions.loginChangeAccountInput,
+        passwordInputChange: actions.loginChangePasswordInput,
+        submit: () => actions.fetchLogin(__WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'account'), __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'password')),
+        error: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(login, 'error'),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_Footer__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      })
+    );
   }
 }
 
@@ -4614,8 +7150,7 @@ function mapDispatchToProps(dispatch, ownProps) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_MsgStack__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_msgStackActions__ = __webpack_require__(14);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/MsgStackContainer.js';
 
 
 
@@ -4627,14 +7162,26 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 class MsgStackContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     const { msgStack, actions } = this.props;
-    return _jsx('div', {
-      style: { position: 'fixed', top: 80, right: 20, minWidth: 100, maxWidth: 300 }
-    }, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_4__components_MsgStack__["a" /* default */], {
-      items: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(msgStack, 'rs', []),
-      close: id => {
-        actions.closeMsg(id);
-      }
-    }));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { style: { position: 'fixed', top: 80, right: 20, minWidth: 100, maxWidth: 300 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_MsgStack__["a" /* default */], {
+        items: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(msgStack, 'rs', []),
+        close: id => {
+          actions.closeMsg(id);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      })
+    );
   }
 }
 
@@ -4670,6 +7217,7 @@ function mapDispatchToProps(dispatch, ownProps) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_PopAddApp__ = __webpack_require__(47);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/PopAddAppContainer.js';
 
 
 
@@ -4703,11 +7251,19 @@ class PopAddAppContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"
         var os = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(addProducts, 'os');
         var platform = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(addProducts, 'platform');
         actions.addProducts(appName, os, platform);
-      }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
     }));
   }
 }
 
+PopAddAppContainer.propTypes = {
+  appName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string
+};
 PopAddAppContainer.defaultProps = {
   appName: ''
 };
@@ -4744,8 +7300,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__actions_authActions__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions_routesActions__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Product__ = __webpack_require__(48);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/ProductContainer.js';
 
 
 
@@ -4770,13 +7325,21 @@ class ProductContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] 
   }
   render() {
     const { deployments, appName, actions } = this.props;
-    return _jsx(__WEBPACK_IMPORTED_MODULE_7__components_Product__["a" /* default */], {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Product__["a" /* default */], {
       appName: appName,
-      items: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(deployments, `rs.${appName}`)
+      items: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(deployments, `rs.${appName}`),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
     });
   }
 }
 
+ProductContainer.propTypes = {
+  appName: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string
+};
 ProductContainer.defaultProps = {
   appName: ''
 };
@@ -4815,7 +7378,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__actions_productsActions__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_ProductList__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__PopAddAppContainer__ = __webpack_require__(61);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/ProductListContainer.js';
 
 
 
@@ -4827,9 +7390,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_9__PopAddAppContainer__["a" /* default */], {});
 
 class ProductListContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   componentDidMount() {
@@ -4844,11 +7404,33 @@ class ProductListContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Componen
   }
   render() {
     const { products, actions } = this.props;
-    return _jsx('div', {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_8__components_ProductList__["a" /* default */], {
-      isFetching: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(products, 'isFetching'),
-      rs: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(products, 'rs'),
-      popAddApp: actions.showPopAddApp
-    }));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__PopAddAppContainer__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__components_ProductList__["a" /* default */], {
+        isFetching: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(products, 'isFetching'),
+        rs: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(products, 'rs'),
+        popAddApp: actions.showPopAddApp,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      })
+    );
   }
 }
 
@@ -4885,7 +7467,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Register__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Header__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Footer__ = __webpack_require__(20);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/containers/RegisterContainer.js';
 
 
 
@@ -4895,39 +7477,66 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-
-
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_6__components_Header__["a" /* default */], {});
-
-var _ref2 = _jsx(__WEBPACK_IMPORTED_MODULE_7__components_Footer__["a" /* default */], {});
 
 class RegisterContainer extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     const { register, actions } = this.props;
     let email = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'email');
     let validateCode = __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'validateCode');
-    return _jsx('div', {}, void 0, _ref, _jsx(__WEBPACK_IMPORTED_MODULE_5__components_Register__["a" /* default */], {
-      step: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'step', 1),
-      registerClean: actions.registerClean,
-      email: email,
-      emailInputChange: actions.registerChangeEmailInput,
-      isSubmitStepOne: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isCheckingEmail'),
-      submitStepOne: () => actions.registerCheckEmail(email),
-      error: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'error'),
-      isSending: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isSending'),
-      lastSendTime: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'lastSendTime', 0),
-      sendValidateCode: () => actions.registerSendValidateCode(email),
-      validateCode: validateCode,
-      validateCodeInputChange: actions.registerChangeValidateCodeInput,
-      isSubmitStepTwo: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isSubmitStepTwo'),
-      submitStepTwo: () => actions.registerCheckCodeExists(email, validateCode),
-      isSubmitStepThree: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isSubmitStepThree'),
-      password: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'password'),
-      passwordInputChange: actions.registerChangePasswordInput,
-      passwordConfirm: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'passwordConfirm'),
-      passwordConfirmInputChange: actions.registerChangePasswordConfirmInput,
-      submitStepThree: () => actions.register(email, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'password'), validateCode)
-    }), _ref2);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__components_Header__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_Register__["a" /* default */], {
+        step: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'step', 1),
+        registerClean: actions.registerClean
+        //----
+        , email: email,
+        emailInputChange: actions.registerChangeEmailInput,
+        isSubmitStepOne: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isCheckingEmail'),
+        submitStepOne: () => actions.registerCheckEmail(email)
+        //----
+        , error: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'error'),
+        isSending: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isSending'),
+        lastSendTime: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'lastSendTime', 0),
+        sendValidateCode: () => actions.registerSendValidateCode(email),
+        validateCode: validateCode,
+        validateCodeInputChange: actions.registerChangeValidateCodeInput,
+        isSubmitStepTwo: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isSubmitStepTwo'),
+        submitStepTwo: () => actions.registerCheckCodeExists(email, validateCode)
+        //---
+        , isSubmitStepThree: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'isSubmitStepThree'),
+        password: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'password'),
+        passwordInputChange: actions.registerChangePasswordInput,
+        passwordConfirm: __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'passwordConfirm'),
+        passwordConfirmInputChange: actions.registerChangePasswordConfirmInput,
+        submitStepThree: () => actions.register(email, __WEBPACK_IMPORTED_MODULE_3_lodash___default.a.get(register, 'password'), validateCode),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_Footer__["a" /* default */], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      })
+    );
   }
 }
 
@@ -5464,7 +8073,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__actions_authActions__ = __webpack_require__(10);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/accessKeys/index.js';
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -5477,6 +8086,8 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
   path: '/accessKeys',
 
   action({ store }) {
+    var _this = this;
+
     return _asyncToGenerator(function* () {
       if (false) {
         setTimeout(function () {
@@ -5489,7 +8100,23 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
       return {
         title: 'My access keys',
         chunk: 'accessKeys',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(AccessKeysContainer, {}))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 19
+            },
+            __self: _this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(AccessKeysContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 19
+            },
+            __self: _this
+          })
+        )
       };
     })();
   }
@@ -5508,8 +8135,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ErrorPage_css__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ErrorPage_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ErrorPage_css__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/error/ErrorPage.js';
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -5523,17 +8149,98 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-var _ref = _jsx('div', {}, void 0, _jsx('h1', {}, void 0, 'Error'), _jsx('p', {}, void 0, 'Sorry, a critical error occurred on this page.'));
+class ErrorPage extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
-function ErrorPage(props) {
-  if (false) {
-    const { error } = props;
-    return _jsx('div', {}, void 0, _jsx('h1', {}, void 0, error.name), _jsx('p', {}, void 0, error.message), _jsx('pre', {}, void 0, error.stack));
+  render() {
+    if (true) {
+      const { error } = this.props;
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            },
+            __self: this
+          },
+          error.name
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            },
+            __self: this
+          },
+          error.message
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'pre',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 30
+            },
+            __self: this
+          },
+          error.stack
+        )
+      );
+    }
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37
+          },
+          __self: this
+        },
+        'Error'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'p',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38
+          },
+          __self: this
+        },
+        'Sorry, a critical error occurred on this page.'
+      )
+    );
   }
-
-  return _ref;
 }
 
+ErrorPage.propTypes = {
+  error: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].shape({
+    name: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired,
+    message: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired,
+    stack: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired
+  }).isRequired
+};
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default()(__WEBPACK_IMPORTED_MODULE_2__ErrorPage_css___default.a)(ErrorPage));
 
@@ -5548,7 +8255,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_fetch__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_LayoutContainer__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__network_RestApi__ = __webpack_require__(13);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/home/index.js';
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -5571,7 +8278,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
   path: '/',
 
   action() {
-    var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_2__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(HomeContainer, {}));
+    var _this = this;
 
     return _asyncToGenerator(function* () {
       const HomeContainer = yield new Promise(function(resolve) { resolve(); }).then((function (require) {
@@ -5580,12 +8287,30 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
       return {
         title: 'AppSync Server',
         chunk: 'home',
-        component: _ref
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 24
+            },
+            __self: _this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(HomeContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 24
+            },
+            __self: _this
+          })
+        )
       };
     })();
   },
 
   actionORIG() {
+    var _this2 = this;
+
     return _asyncToGenerator(function* () {
       const resp = yield __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__core_fetch__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_3__network_RestApi__["a" /* default */].buildWebUsageUrl(), {
         method: 'get',
@@ -5603,9 +8328,22 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
       return {
         title: 'AppSync Server',
         chunk: 'home',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_2__containers_LayoutContainer__["a" /* default */], {}, void 0, _jsx(HomeContainer, {
-          html: data
-        }))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2__containers_LayoutContainer__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            },
+            __self: _this2
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(HomeContainer, { html: data, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            },
+            __self: _this2
+          })
+        )
       };
     })();
   }
@@ -5665,8 +8403,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NotFound_css__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NotFound_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__NotFound_css__);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/notFound/NotFound.js';
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -5680,16 +8417,55 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 
 
-var _ref = _jsx('p', {}, void 0, 'Sorry, the page you were trying to view does not exist.');
+class NotFound extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
-function NotFound(props) {
-  return _jsx('div', {
-    className: __WEBPACK_IMPORTED_MODULE_2__NotFound_css___default.a.root
-  }, void 0, _jsx('div', {
-    className: __WEBPACK_IMPORTED_MODULE_2__NotFound_css___default.a.container
-  }, void 0, _jsx('h1', {}, void 0, props.title), _ref));
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: __WEBPACK_IMPORTED_MODULE_2__NotFound_css___default.a.root, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_2__NotFound_css___default.a.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h1',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 23
+            },
+            __self: this
+          },
+          this.props.title
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 24
+            },
+            __self: this
+          },
+          'Sorry, the page you were trying to view does not exist.'
+        )
+      )
+    );
+  }
 }
 
+NotFound.propTypes = {
+  title: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].string.isRequired
+};
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_1_isomorphic_style_loader_lib_withStyles___default()(__WEBPACK_IMPORTED_MODULE_2__NotFound_css___default.a)(NotFound));
 
 /***/ }),
@@ -5702,8 +8478,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__NotFound__ = __webpack_require__(76);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
-
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/notFound/index.js';
 /**
  * React Starter Kit (https://www.reactstarterkit.com/)
  *
@@ -5719,10 +8494,6 @@ var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" &
 
 const title = 'Page Not Found';
 
-var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {}, void 0, _jsx(__WEBPACK_IMPORTED_MODULE_2__NotFound__["a" /* default */], {
-  title: title
-}));
-
 /* harmony default export */ __webpack_exports__["default"] = ({
 
   path: '*',
@@ -5730,7 +8501,22 @@ var _ref = _jsx(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default 
   action() {
     return {
       title,
-      component: _ref,
+      component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */],
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          },
+          __self: this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__NotFound__["a" /* default */], { title: title, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          },
+          __self: this
+        })
+      ),
       status: 404
     };
   }
@@ -5746,7 +8532,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__(15);
-var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+var _jsxFileName = '/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/register/index.js';
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -5758,6 +8544,8 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
   path: '/register',
 
   action({ store }) {
+    var _this = this;
+
     return _asyncToGenerator(function* () {
 
       if (false) {}
@@ -5768,7 +8556,23 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
       return {
         title: 'Register',
         chunk: 'register',
-        component: _jsx(__WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */], {}, void 0, _jsx(RegisterContainer, {}))
+        component: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1__components_Layout__["a" /* default */],
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            },
+            __self: _this
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(RegisterContainer, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            },
+            __self: _this
+          })
+        )
       };
     })();
   }
@@ -5818,12 +8622,12 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._15F5I{padding-left:20px;padding-right:20px}._1RQYM{margin:0 auto;padding:0 0 40px;min-height:480px;max-width:1000px}table{font-size:1.2em;width:100%;text-align:center}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.AccessKeys-root-15F5I {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.AccessKeys-container-1RQYM {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: 1000px;\n}\n\ntable{\n  font-size: 1.2em;\n  width: 100%;\n  text-align: center;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/AccessKeys/AccessKeys.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC3BD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAkB;EAClB,kBAAoC;CACrC;;AAED;EACE,iBAAiB;EACjB,YAAY;EACZ,mBAAmB;CACpB","file":"AccessKeys.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","\n@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: var(--max-content-width);\n}\n\ntable{\n  font-size: 1.2em;\n  width: 100%;\n  text-align: center;\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_15F5I",
-	"container": "_1RQYM"
+	"root": "AccessKeys-root-15F5I",
+	"container": "AccessKeys-container-1RQYM"
 };
 
 /***/ }),
@@ -5835,12 +8639,12 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._1R8uX{padding-left:20px;padding-right:20px}._1-vLN{margin:0 auto;padding:0 0 40px;min-height:480px;max-width:1000px}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.Deployment-root-1R8uX {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.Deployment-container-1-vLN {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: 1000px;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Deployment/Deployment.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC5BD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAkB;EAClB,kBAAoC;CACrC","file":"Deployment.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: var(--max-content-width);\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_1R8uX",
-	"container": "_1-vLN"
+	"root": "Deployment-root-1R8uX",
+	"container": "Deployment-container-1-vLN"
 };
 
 /***/ }),
@@ -5852,15 +8656,15 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._3Jihw{width:100%;height:60px;background-color:#222;border-color:#080808}.n1bVC{margin:0 auto;padding:20px 15px;max-width:1000px;text-align:center}._2mr6B{color:hsla(0,0%,100%,.5)}._3HO-I{color:hsla(0,0%,100%,.3)}._1sUkm,._2mr6B{padding:2px 5px;font-size:1em}._1sUkm,._1sUkm:active,._1sUkm:visited{color:hsla(0,0%,100%,.6);text-decoration:none}._1sUkm:hover{color:#fff}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.Footer-root-3Jihw {\n  /*position: absolute;*/\n  /*bottom: 0;*/\n  width: 100%;\n  /* Set the fixed height of the footer here */\n  height: 60px;\n  background-color: #222;\n  border-color: #080808;\n}\n\n.Footer-container-n1bVC {\n  margin: 0 auto;\n  padding: 20px 15px;\n  max-width: 1000px;\n  text-align: center;\n}\n\n.Footer-text-2mr6B {\n  color: rgba(255, 255, 255, 0.5);\n}\n\n.Footer-spacer-3HO-I {\n  color: rgba(255, 255, 255, 0.3);\n}\n\n.Footer-text-2mr6B,\n.Footer-link-1sUkm {\n  padding: 2px 5px;\n  font-size: 1em;\n}\n\n.Footer-link-1sUkm,\n.Footer-link-1sUkm:active,\n.Footer-link-1sUkm:visited {\n  color: rgba(255, 255, 255, 0.6);\n  text-decoration: none;\n}\n\n.Footer-link-1sUkm:hover {\n  color: rgba(255, 255, 255, 1);\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Footer/Footer.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC5BD;EACE,uBAAuB;EACvB,cAAc;EACd,YAAY;EACZ,6CAA6C;EAC7C,aAAa;EACb,uBAAuB;EACvB,sBAAsB;CACvB;;AAED;EACE,eAAe;EACf,mBAAmB;EACnB,kBAAoC;EACpC,mBAAmB;CACpB;;AAED;EACE,gCAAgC;CACjC;;AAED;EACE,gCAAgC;CACjC;;AAED;;EAEE,iBAAiB;EACjB,eAAe;CAChB;;AAED;;;EAGE,gCAAgC;EAChC,sBAAsB;CACvB;;AAED;EACE,8BAA8B;CAC/B","file":"Footer.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","@import '../variables.css';\n\n.root {\n  /*position: absolute;*/\n  /*bottom: 0;*/\n  width: 100%;\n  /* Set the fixed height of the footer here */\n  height: 60px;\n  background-color: #222;\n  border-color: #080808;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 20px 15px;\n  max-width: var(--max-content-width);\n  text-align: center;\n}\n\n.text {\n  color: rgba(255, 255, 255, 0.5);\n}\n\n.spacer {\n  color: rgba(255, 255, 255, 0.3);\n}\n\n.text,\n.link {\n  padding: 2px 5px;\n  font-size: 1em;\n}\n\n.link,\n.link:active,\n.link:visited {\n  color: rgba(255, 255, 255, 0.6);\n  text-decoration: none;\n}\n\n.link:hover {\n  color: rgba(255, 255, 255, 1);\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_3Jihw",
-	"container": "n1bVC",
-	"text": "_2mr6B",
-	"spacer": "_3HO-I",
-	"link": "_1sUkm"
+	"root": "Footer-root-3Jihw",
+	"container": "Footer-container-n1bVC",
+	"text": "Footer-text-2mr6B",
+	"spacer": "Footer-spacer-3HO-I",
+	"link": "Footer-link-1sUkm"
 };
 
 /***/ }),
@@ -5872,11 +8676,11 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._19lnX{color:lightness(10%));text-decoration:none;font-size:1.75em}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.Header-brand-19lnX {\n  color: lightness(+10%));\n  text-decoration: none;\n  font-size: 1.75em; /* ~28px */\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Header/Header.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC3BD;EACE,wBAAwB;EACxB,sBAAsB;EACtB,kBAAkB,CAAC,WAAW;CAC/B","file":"Header.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","\n@import '../variables.css';\n\n.brand {\n  color: lightness(+10%));\n  text-decoration: none;\n  font-size: 1.75em; /* ~28px */\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"brand": "_19lnX"
+	"brand": "Header-brand-19lnX"
 };
 
 /***/ }),
@@ -5888,12 +8692,12 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._3rK2B{padding-left:20px;padding-right:20px}.bf36U{margin:0 auto;padding:0 0 40px;max-width:1000px}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.Home-root-3rK2B {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.Home-container-bf36U {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  max-width: 1000px;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Home/Home.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC3BD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAoC;CACrC","file":"Home.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","\n@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  max-width: var(--max-content-width);\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_3rK2B",
-	"container": "bf36U"
+	"root": "Home-root-3rK2B",
+	"container": "Home-container-bf36U"
 };
 
 /***/ }),
@@ -5905,7 +8709,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}html{color:#222;font-weight:100;font-size:1em;font-family:Segoe UI,HelveticaNeue-Light,sans-serif;line-height:1.375;height:100%}a{color:#0074c2}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}audio,canvas,iframe,img,svg,video{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.browserupgrade{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}@media print{*,:after,:before{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:\" (\" attr(href) \")\"}abbr[title]:after{content:\" (\" attr(title) \")\"}a[href^=\"#\"]:after,a[href^=\"javascript:\"]:after{content:\"\"}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/**\n * 1. Change the default font family in all browsers (opinionated).\n * 2. Correct the line height in all browsers.\n * 3. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\n/* Document\n   ========================================================================== */\n\nhtml {\n  font-family: sans-serif; /* 1 */\n  line-height: 1.15; /* 2 */\n  -ms-text-size-adjust: 100%; /* 3 */\n  -webkit-text-size-adjust: 100%; /* 3 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * Remove the outline on focused links when they are also active or hovered\n * in all browsers (opinionated).\n */\n\na:active,\na:hover {\n  outline-width: 0;\n}\n\n/**\n * 1. Remove the bottom border in Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Change the border, margin, and padding in all browsers (opinionated).\n */\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}\n\n/*! React Starter Kit | MIT License | https://www.reactstarterkit.com/ */\n\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n/*\n * Base styles\n * ========================================================================== */\n\nhtml {\n  color: #222;\n  font-weight: 100;\n  font-size: 1em; /* ~16px; */\n  font-family: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n  line-height: 1.375; /* ~22px */\n  height: 100%;\n}\n\na {\n  color: #0074c2;\n}\n\n/*\n * Remove text-shadow in selection highlight:\n * https://twitter.com/miketaylr/status/12228805301\n *\n * These selection rule sets have to be separate.\n * Customize the background color to match your design.\n */\n\n::-moz-selection {\n  background: #b3d4fc;\n  text-shadow: none;\n}\n\n::selection {\n  background: #b3d4fc;\n  text-shadow: none;\n}\n\n/*\n * A better looking default horizontal rule\n */\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0;\n}\n\n/*\n * Remove the gap between audio, canvas, iframes,\n * images, videos and the bottom of their containers:\n * https://github.com/h5bp/html5-boilerplate/issues/440\n */\n\naudio,\ncanvas,\niframe,\nimg,\nsvg,\nvideo {\n  vertical-align: middle;\n}\n\n/*\n * Remove default fieldset styles.\n */\n\nfieldset {\n  border: 0;\n  margin: 0;\n  padding: 0;\n}\n\n/*\n * Allow only vertical resizing of textareas.\n */\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n * Browser upgrade prompt\n * ========================================================================== */\n\n.browserupgrade {\n  margin: 0.2em 0;\n  background: #ccc;\n  color: #000;\n  padding: 0.2em 0;\n}\n\n/*\n * Print styles\n * Inlined to avoid the additional HTTP request:\n * http://www.phpied.com/delay-loading-your-print-css/\n * ========================================================================== */\n\n@media print {\n  *,\n  *::before,\n  *::after {\n    background: transparent !important;\n    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */\n    box-shadow: none !important;\n    text-shadow: none !important;\n  }\n\n  a,\n  a:visited {\n    text-decoration: underline;\n  }\n\n  a[href]::after {\n    content: ' (' attr(href) ')';\n  }\n\n  abbr[title]::after {\n    content: ' (' attr(title) ')';\n  }\n\n  /*\n   * Don't show links that are fragment identifiers,\n   * or use the `javascript:` pseudo protocol\n   */\n\n  a[href^='#']::after,\n  a[href^='javascript:']::after {\n    content: '';\n  }\n\n  pre,\n  blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid;\n  }\n\n  /*\n   * Printing Tables:\n   * http://css-discuss.incutio.com/wiki/Printing_Tables\n   */\n\n  thead {\n    display: table-header-group;\n  }\n\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n\n  img {\n    max-width: 100% !important;\n  }\n\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Layout/Layout.css","/home/adnan/codes/tylts/nativescript-app-sync-web/node_modules/normalize.css/normalize.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;ACPH,4EAA4E;;AAE5E;;;;;GAKG;;AAEH;gFACgF;;AAEhF;EACE,wBAAwB,CAAC,OAAO;EAChC,kBAAkB,CAAC,OAAO;EAC1B,2BAA2B,CAAC,OAAO;EACnC,+BAA+B,CAAC,OAAO;CACxC;;AAED;gFACgF;;AAEhF;;GAEG;;AAEH;EACE,UAAU;CACX;;AAED;;GAEG;;AAEH;;;;;;EAME,eAAe;CAChB;;AAED;;;GAGG;;AAEH;EACE,eAAe;EACf,iBAAiB;CAClB;;AAED;gFACgF;;AAEhF;;;GAGG;;AAEH;;OAEO,OAAO;EACZ,eAAe;CAChB;;AAED;;GAEG;;AAEH;EACE,iBAAiB;CAClB;;AAED;;;GAGG;;AAEH;EACE,wBAAwB,CAAC,OAAO;EAChC,UAAU,CAAC,OAAO;EAClB,kBAAkB,CAAC,OAAO;CAC3B;;AAED;;;GAGG;;AAEH;EACE,kCAAkC,CAAC,OAAO;EAC1C,eAAe,CAAC,OAAO;CACxB;;AAED;gFACgF;;AAEhF;;;GAGG;;AAEH;EACE,8BAA8B,CAAC,OAAO;EACtC,sCAAsC,CAAC,OAAO;CAC/C;;AAED;;;GAGG;;AAEH;;EAEE,iBAAiB;CAClB;;AAED;;;GAGG;;AAEH;EACE,oBAAoB,CAAC,OAAO;EAC5B,2BAA2B,CAAC,OAAO;EACnC,kCAAkC,CAAC,OAAO;CAC3C;;AAED;;GAEG;;AAEH;;EAEE,qBAAqB;CACtB;;AAED;;GAEG;;AAEH;;EAEE,oBAAoB;CACrB;;AAED;;;GAGG;;AAEH;;;EAGE,kCAAkC,CAAC,OAAO;EAC1C,eAAe,CAAC,OAAO;CACxB;;AAED;;GAEG;;AAEH;EACE,mBAAmB;CACpB;;AAED;;GAEG;;AAEH;EACE,uBAAuB;EACvB,YAAY;CACb;;AAED;;GAEG;;AAEH;EACE,eAAe;CAChB;;AAED;;;GAGG;;AAEH;;EAEE,eAAe;EACf,eAAe;EACf,mBAAmB;EACnB,yBAAyB;CAC1B;;AAED;EACE,gBAAgB;CACjB;;AAED;EACE,YAAY;CACb;;AAED;gFACgF;;AAEhF;;GAEG;;AAEH;;EAEE,sBAAsB;CACvB;;AAED;;GAEG;;AAEH;EACE,cAAc;EACd,UAAU;CACX;;AAED;;GAEG;;AAEH;EACE,mBAAmB;CACpB;;AAED;;GAEG;;AAEH;EACE,iBAAiB;CAClB;;AAED;gFACgF;;AAEhF;;;GAGG;;AAEH;;;;;EAKE,wBAAwB,CAAC,OAAO;EAChC,gBAAgB,CAAC,OAAO;EACxB,kBAAkB,CAAC,OAAO;EAC1B,UAAU,CAAC,OAAO;CACnB;;AAED;;;GAGG;;AAEH;QACQ,OAAO;EACb,kBAAkB;CACnB;;AAED;;;GAGG;;AAEH;SACS,OAAO;EACd,qBAAqB;CACtB;;AAED;;;;GAIG;;AAEH;;;;EAIE,2BAA2B,CAAC,OAAO;CACpC;;AAED;;GAEG;;AAEH;;;;EAIE,mBAAmB;EACnB,WAAW;CACZ;;AAED;;GAEG;;AAEH;;;;EAIE,+BAA+B;CAChC;;AAED;;GAEG;;AAEH;EACE,0BAA0B;EAC1B,cAAc;EACd,+BAA+B;CAChC;;AAED;;;;;GAKG;;AAEH;EACE,uBAAuB,CAAC,OAAO;EAC/B,eAAe,CAAC,OAAO;EACvB,eAAe,CAAC,OAAO;EACvB,gBAAgB,CAAC,OAAO;EACxB,WAAW,CAAC,OAAO;EACnB,oBAAoB,CAAC,OAAO;CAC7B;;AAED;;;GAGG;;AAEH;EACE,sBAAsB,CAAC,OAAO;EAC9B,yBAAyB,CAAC,OAAO;CAClC;;AAED;;GAEG;;AAEH;EACE,eAAe;CAChB;;AAED;;;GAGG;;AAEH;;EAEE,uBAAuB,CAAC,OAAO;EAC/B,WAAW,CAAC,OAAO;CACpB;;AAED;;GAEG;;AAEH;;EAEE,aAAa;CACd;;AAED;;;GAGG;;AAEH;EACE,8BAA8B,CAAC,OAAO;EACtC,qBAAqB,CAAC,OAAO;CAC9B;;AAED;;GAEG;;AAEH;;EAEE,yBAAyB;CAC1B;;AAED;;;GAGG;;AAEH;EACE,2BAA2B,CAAC,OAAO;EACnC,cAAc,CAAC,OAAO;CACvB;;AAED;gFACgF;;AAEhF;;;GAGG;;AAEH;;EAEE,eAAe;CAChB;;AAED;;GAEG;;AAEH;EACE,mBAAmB;CACpB;;AAED;gFACgF;;AAEhF;;GAEG;;AAEH;EACE,sBAAsB;CACvB;;AAED;;GAEG;;AAEH;EACE,cAAc;CACf;;AAED;gFACgF;;AAEhF;;GAEG;;AAEH;EACE,cAAc;CACf;;ADjcD,yEAAyE;;AEXzE;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AFfD;;gFAEgF;;AAEhF;EACE,YAAY;EACZ,iBAAiB;EACjB,eAAe,CAAC,YAAY;EAC5B,2DAAqC;EACrC,mBAAmB,CAAC,WAAW;EAC/B,aAAa;CACd;;AAED;EACE,eAAe;CAChB;;AAED;;;;;;GAMG;;AAEH;EACE,oBAAoB;EACpB,kBAAkB;CACnB;;AAED;EACE,oBAAoB;EACpB,kBAAkB;CACnB;;AAED;;GAEG;;AAEH;EACE,eAAe;EACf,YAAY;EACZ,UAAU;EACV,2BAA2B;EAC3B,cAAc;EACd,WAAW;CACZ;;AAED;;;;GAIG;;AAEH;;;;;;EAME,uBAAuB;CACxB;;AAED;;GAEG;;AAEH;EACE,UAAU;EACV,UAAU;EACV,WAAW;CACZ;;AAED;;GAEG;;AAEH;EACE,iBAAiB;CAClB;;AAED;;gFAEgF;;AAEhF;EACE,gBAAgB;EAChB,iBAAiB;EACjB,YAAY;EACZ,iBAAiB;CAClB;;AAED;;;;gFAIgF;;AAEhF;EACE;;;IAGE,mCAAmC;IACnC,uBAAuB,CAAC,+DAA+D;IACvF,4BAA4B;IAC5B,6BAA6B;GAC9B;;EAED;;IAEE,2BAA2B;GAC5B;;EAED;IACE,6BAA6B;GAC9B;;EAED;IACE,8BAA8B;GAC/B;;EAED;;;KAGG;;EAEH;;IAEE,YAAY;GACb;;EAED;;IAEE,uBAAuB;IACvB,yBAAyB;GAC1B;;EAED;;;KAGG;;EAEH;IACE,4BAA4B;GAC7B;;EAED;;IAEE,yBAAyB;GAC1B;;EAED;IACE,2BAA2B;GAC5B;;EAED;;;IAGE,WAAW;IACX,UAAU;GACX;;EAED;;IAEE,wBAAwB;GACzB;CACF","file":"Layout.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n@import '../../../node_modules/normalize.css/normalize.css';\n\n/*! React Starter Kit | MIT License | https://www.reactstarterkit.com/ */\n\n@import '../variables.css';\n\n/*\n * Base styles\n * ========================================================================== */\n\nhtml {\n  color: #222;\n  font-weight: 100;\n  font-size: 1em; /* ~16px; */\n  font-family: var(--font-family-base);\n  line-height: 1.375; /* ~22px */\n  height: 100%;\n}\n\na {\n  color: #0074c2;\n}\n\n/*\n * Remove text-shadow in selection highlight:\n * https://twitter.com/miketaylr/status/12228805301\n *\n * These selection rule sets have to be separate.\n * Customize the background color to match your design.\n */\n\n::-moz-selection {\n  background: #b3d4fc;\n  text-shadow: none;\n}\n\n::selection {\n  background: #b3d4fc;\n  text-shadow: none;\n}\n\n/*\n * A better looking default horizontal rule\n */\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0;\n}\n\n/*\n * Remove the gap between audio, canvas, iframes,\n * images, videos and the bottom of their containers:\n * https://github.com/h5bp/html5-boilerplate/issues/440\n */\n\naudio,\ncanvas,\niframe,\nimg,\nsvg,\nvideo {\n  vertical-align: middle;\n}\n\n/*\n * Remove default fieldset styles.\n */\n\nfieldset {\n  border: 0;\n  margin: 0;\n  padding: 0;\n}\n\n/*\n * Allow only vertical resizing of textareas.\n */\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n * Browser upgrade prompt\n * ========================================================================== */\n\n:global(.browserupgrade) {\n  margin: 0.2em 0;\n  background: #ccc;\n  color: #000;\n  padding: 0.2em 0;\n}\n\n/*\n * Print styles\n * Inlined to avoid the additional HTTP request:\n * http://www.phpied.com/delay-loading-your-print-css/\n * ========================================================================== */\n\n@media print {\n  *,\n  *::before,\n  *::after {\n    background: transparent !important;\n    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */\n    box-shadow: none !important;\n    text-shadow: none !important;\n  }\n\n  a,\n  a:visited {\n    text-decoration: underline;\n  }\n\n  a[href]::after {\n    content: ' (' attr(href) ')';\n  }\n\n  abbr[title]::after {\n    content: ' (' attr(title) ')';\n  }\n\n  /*\n   * Don't show links that are fragment identifiers,\n   * or use the `javascript:` pseudo protocol\n   */\n\n  a[href^='#']::after,\n  a[href^='javascript:']::after {\n    content: '';\n  }\n\n  pre,\n  blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid;\n  }\n\n  /*\n   * Printing Tables:\n   * http://css-discuss.incutio.com/wiki/Printing_Tables\n   */\n\n  thead {\n    display: table-header-group;\n  }\n\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n\n  img {\n    max-width: 100% !important;\n  }\n\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n}\n","/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/**\n * 1. Change the default font family in all browsers (opinionated).\n * 2. Correct the line height in all browsers.\n * 3. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\n/* Document\n   ========================================================================== */\n\nhtml {\n  font-family: sans-serif; /* 1 */\n  line-height: 1.15; /* 2 */\n  -ms-text-size-adjust: 100%; /* 3 */\n  -webkit-text-size-adjust: 100%; /* 3 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * Remove the outline on focused links when they are also active or hovered\n * in all browsers (opinionated).\n */\n\na:active,\na:hover {\n  outline-width: 0;\n}\n\n/**\n * 1. Remove the bottom border in Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Change the border, margin, and padding in all browsers (opinionated).\n */\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}\n","/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -5919,12 +8723,12 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._3bNak{padding-left:20px;padding-right:20px}._2WGpY{margin:0 auto;padding:0 0 40px;min-height:480px;max-width:1000px}table{font-size:1.2em;width:100%;text-align:center}li{list-style:none}li a{text-decoration:none;color:inherit}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.Product-root-3bNak {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.Product-container-2WGpY {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: 1000px;\n}\n\ntable{\n  font-size: 1.2em;\n  width: 100%;\n  text-align: center;\n}\n\nli {\n  list-style: none;\n}\n\nli a {\n  text-decoration: none;\n  color: inherit;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Product/Product.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC5BD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAkB;EAClB,kBAAoC;CACrC;;AAED;EACE,iBAAiB;EACjB,YAAY;EACZ,mBAAmB;CACpB;;AAED;EACE,iBAAiB;CAClB;;AAED;EACE,sBAAsB;EACtB,eAAe;CAChB","file":"Product.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: var(--max-content-width);\n}\n\ntable{\n  font-size: 1.2em;\n  width: 100%;\n  text-align: center;\n}\n\nli {\n  list-style: none;\n}\n\nli a {\n  text-decoration: none;\n  color: inherit;\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_3bNak",
-	"container": "_2WGpY"
+	"root": "Product-root-3bNak",
+	"container": "Product-container-2WGpY"
 };
 
 /***/ }),
@@ -5936,15 +8740,15 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._3AV4k{padding-left:20px;padding-right:20px}._3-pwX{margin:0 auto;padding:0 0 40px;min-height:480px;max-width:1000px}table{font-size:1.2em;width:100%;text-align:center}li{list-style:none}li a{text-decoration:none;color:inherit}._2-yGN{padding-left:10px;padding-right:5px}._3o5bn{padding:2px 4px;font-size:13px;font-style:normal;font-weight:400;display:inline-block;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}._2W088{background-color:#2faa60}._2-yGN em{color:green}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.ProductList-root-3AV4k {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.ProductList-container-3-pwX {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: 1000px;\n}\n\ntable{\n  font-size: 1.2em;\n  width: 100%;\n  text-align: center;\n}\n\nli {\n  list-style: none;\n}\n\nli a {\n  text-decoration: none;\n  color: inherit;\n}\n\n.ProductList-permission-2-yGN {\n  padding-left: 10px;\n  padding-right: 5px;\n}\n\n.ProductList-label-3o5bn {\n  padding: 2px 4px;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: normal;\n  display: inline-block;\n  line-height: 1;\n  color: white;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25em;\n}\n\n.ProductList-labelSuccess-2W088 {\n  background-color: #2faa60;\n}\n\n.ProductList-permission-2-yGN em {\n  color: green;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/ProductList/ProductList.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC3BD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAkB;EAClB,kBAAoC;CACrC;;AAED;EACE,iBAAiB;EACjB,YAAY;EACZ,mBAAmB;CACpB;;AAED;EACE,iBAAiB;CAClB;;AAED;EACE,sBAAsB;EACtB,eAAe;CAChB;;AAED;EACE,mBAAmB;EACnB,mBAAmB;CACpB;;AAED;EACE,iBAAiB;EACjB,gBAAgB;EAChB,mBAAmB;EACnB,oBAAoB;EACpB,sBAAsB;EACtB,eAAe;EACf,aAAa;EACb,mBAAmB;EACnB,oBAAoB;EACpB,yBAAyB;EACzB,sBAAsB;CACvB;;AAED;EACE,0BAA0B;CAC3B;;AAED;EACE,aAAa;CACd","file":"ProductList.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","\n@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  min-height: 480px;\n  max-width: var(--max-content-width);\n}\n\ntable{\n  font-size: 1.2em;\n  width: 100%;\n  text-align: center;\n}\n\nli {\n  list-style: none;\n}\n\nli a {\n  text-decoration: none;\n  color: inherit;\n}\n\n.permission {\n  padding-left: 10px;\n  padding-right: 5px;\n}\n\n.label {\n  padding: 2px 4px;\n  font-size: 13px;\n  font-style: normal;\n  font-weight: normal;\n  display: inline-block;\n  line-height: 1;\n  color: white;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25em;\n}\n\n.labelSuccess {\n  background-color: #2faa60;\n}\n\n.permission em {\n  color: green;\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_3AV4k",
-	"container": "_3-pwX",
-	"permission": "_2-yGN",
-	"label": "_3o5bn",
-	"labelSuccess": "_2W088"
+	"root": "ProductList-root-3AV4k",
+	"container": "ProductList-container-3-pwX",
+	"permission": "ProductList-permission-2-yGN",
+	"label": "ProductList-label-3o5bn",
+	"labelSuccess": "ProductList-labelSuccess-2W088"
 };
 
 /***/ }),
@@ -5956,12 +8760,12 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._2PFpa{font-size:62.5%;padding-top:50px;padding-bottom:50px;padding-left:0;margin:0 auto 30px}._2PFpa li{float:left;width:25%;height:45px;line-height:45px;text-align:center;font-size:1.6em;color:#666;background-color:#ededed;position:relative;list-style:none;display:block}._2PFpa li i{display:inline-block;width:20px;height:20px;border-radius:50%;font-style:normal;background-color:#3cb371;color:#fff;margin-right:5px;line-height:1.3}@media (max-width:600px){._2PFpa li span{display:none}}._2PFpa li em{display:inline-block;width:28px;position:absolute;top:-1px;right:-14px;z-index:1}._2PFpa li:last-child em{display:none}._2PFpa .E4Fzb{background-color:#3cb371;color:#fff}._2PFpa .E4Fzb i{color:#3cb371;background-color:#fff}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.NavStep-progress-2PFpa {\n  font-size: 62.5%;\n  padding-top: 50px;\n  padding-bottom: 50px;\n  padding-left: 0px;\n  margin: 0 auto 30px;\n}\n\n.NavStep-progress-2PFpa li {\n  float: left;\n  width: 25%;\n  height: 45px;\n  line-height: 45px;\n  text-align: center;\n  font-size: 1.6em;\n  color: #666;\n  background-color: #ededed;\n  position: relative;\n  list-style: none;\n  display: block;\n}\n\n.NavStep-progress-2PFpa li i {\n  display: inline-block;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  font-style: normal;\n  background-color: #3cb371;\n  color: #fff;\n  margin-right: 5px;\n  line-height: 1.3;\n}\n\n@media (max-width: 600px) {\n  .NavStep-progress-2PFpa li span {\n    display: none;\n  }\n}\n\n.NavStep-progress-2PFpa li em {\n  display: inline-block;\n  width: 28px;\n  position: absolute;\n  top: -1px;\n  right: -14px;\n  z-index: 1;\n}\n\n.NavStep-progress-2PFpa li:last-child em {\n  display: none;\n}\n\n.NavStep-progress-2PFpa .NavStep-current-E4Fzb {\n  background-color: #3cb371;\n  color: #fff;\n}\n\n.NavStep-progress-2PFpa .NavStep-current-E4Fzb i {\n  color: #3cb371;\n  background-color: #fff;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/NavStep/NavStep.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;ACxBD;EACE,iBAAiB;EACjB,kBAAkB;EAClB,qBAAqB;EACrB,kBAAkB;EAClB,oBAAoB;CACrB;;AAED;EACE,YAAY;EACZ,WAAW;EACX,aAAa;EACb,kBAAkB;EAClB,mBAAmB;EACnB,iBAAiB;EACjB,YAAY;EACZ,0BAA0B;EAC1B,mBAAmB;EACnB,iBAAiB;EACjB,eAAe;CAChB;;AAED;EACE,sBAAsB;EACtB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,mBAAmB;EACnB,0BAAoC;EACpC,YAAY;EACZ,kBAAkB;EAClB,iBAAiB;CAClB;;AAED;EACE;IACE,cAAc;GACf;CACF;;AAED;EACE,sBAAsB;EACtB,YAAY;EACZ,mBAAmB;EACnB,UAAU;EACV,aAAa;EACb,WAAW;CACZ;;AAED;EACE,cAAc;CACf;;AAED;EACE,0BAAoC;EACpC,YAAY;CACb;;AAED;EACE,eAAyB;EACzB,uBAAuB;CACxB","file":"NavStep.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","@import '../../variables.css';\n\n:root {\n  --main-color: #3cb371;\n}\n\n.progress {\n  font-size: 62.5%;\n  padding-top: 50px;\n  padding-bottom: 50px;\n  padding-left: 0px;\n  margin: 0 auto 30px;\n}\n\n.progress li {\n  float: left;\n  width: 25%;\n  height: 45px;\n  line-height: 45px;\n  text-align: center;\n  font-size: 1.6em;\n  color: #666;\n  background-color: #ededed;\n  position: relative;\n  list-style: none;\n  display: block;\n}\n\n.progress li i {\n  display: inline-block;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  font-style: normal;\n  background-color: var(--main-color);\n  color: #fff;\n  margin-right: 5px;\n  line-height: 1.3;\n}\n\n@media (max-width: 600px) {\n  .progress li span {\n    display: none;\n  }\n}\n\n.progress li em {\n  display: inline-block;\n  width: 28px;\n  position: absolute;\n  top: -1px;\n  right: -14px;\n  z-index: 1;\n}\n\n.progress li:last-child em {\n  display: none;\n}\n\n.progress .current {\n  background-color: var(--main-color);\n  color: #fff;\n}\n\n.progress .current i {\n  color: var(--main-color);\n  background-color: #fff;\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"progress": "_2PFpa",
-	"current": "E4Fzb"
+	"progress": "NavStep-progress-2PFpa",
+	"current": "NavStep-current-E4Fzb"
 };
 
 /***/ }),
@@ -5973,12 +8777,12 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._2JqUI{padding-left:20px;padding-right:20px}.cDS84{margin:0 auto;padding:0 0 40px;max-width:700px;min-height:480px}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.Register-root-2JqUI {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.Register-container-cDS84 {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  max-width: 700px;\n  min-height: 480px;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/Register/Register.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;AC5BD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,iBAAiB;EACjB,kBAAkB;CACnB","file":"Register.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n","@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  max-width: 700px;\n  min-height: 480px;\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_2JqUI",
-	"container": "cDS84"
+	"root": "Register-root-2JqUI",
+	"container": "Register-container-cDS84"
 };
 
 /***/ }),
@@ -5990,7 +8794,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "*{line-height:1.2;margin:0}html{color:#888;display:table;font-family:sans-serif;height:100%;text-align:center;width:100%}body{display:table-cell;vertical-align:middle;padding:2em}h1{color:#555;font-size:2em;font-weight:400}p{margin:0 auto;width:280px}pre{text-align:left;margin-top:32px;margin-top:2rem}@media only screen and (max-width:280px){body,p{width:95%}h1{font-size:1.5em;margin:0 0 .3em}}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n* {\n  line-height: 1.2;\n  margin: 0;\n}\n\nhtml {\n  color: #888;\n  display: table;\n  font-family: sans-serif;\n  height: 100%;\n  text-align: center;\n  width: 100%;\n}\n\nbody {\n  display: table-cell;\n  vertical-align: middle;\n  padding: 2em;\n}\n\nh1 {\n  color: #555;\n  font-size: 2em;\n  font-weight: 400;\n}\n\np {\n  margin: 0 auto;\n  width: 280px;\n}\n\npre {\n  text-align: left;\n  margin-top: 32px;\n  margin-top: 2rem;\n}\n\n@media only screen and (max-width: 280px) {\n  body,\n  p {\n    width: 95%;\n  }\n\n  h1 {\n    font-size: 1.5em;\n    margin: 0 0 0.3em;\n  }\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/error/ErrorPage.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;AAEH;EACE,iBAAiB;EACjB,UAAU;CACX;;AAED;EACE,YAAY;EACZ,eAAe;EACf,wBAAwB;EACxB,aAAa;EACb,mBAAmB;EACnB,YAAY;CACb;;AAED;EACE,oBAAoB;EACpB,uBAAuB;EACvB,aAAa;CACd;;AAED;EACE,YAAY;EACZ,eAAe;EACf,iBAAiB;CAClB;;AAED;EACE,eAAe;EACf,aAAa;CACd;;AAED;EACE,iBAAiB;EACjB,iBAAiB;EAAjB,iBAAiB;CAClB;;AAED;EACE;;IAEE,WAAW;GACZ;;EAED;IACE,iBAAiB;IACjB,kBAAkB;GACnB;CACF","file":"ErrorPage.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n* {\n  line-height: 1.2;\n  margin: 0;\n}\n\nhtml {\n  color: #888;\n  display: table;\n  font-family: sans-serif;\n  height: 100%;\n  text-align: center;\n  width: 100%;\n}\n\nbody {\n  display: table-cell;\n  vertical-align: middle;\n  padding: 2em;\n}\n\nh1 {\n  color: #555;\n  font-size: 2em;\n  font-weight: 400;\n}\n\np {\n  margin: 0 auto;\n  width: 280px;\n}\n\npre {\n  text-align: left;\n  margin-top: 2rem;\n}\n\n@media only screen and (max-width: 280px) {\n  body,\n  p {\n    width: 95%;\n  }\n\n  h1 {\n    font-size: 1.5em;\n    margin: 0 0 0.3em;\n  }\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -6004,19 +8808,19 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "._3whbd{padding-left:20px;padding-right:20px}._1BOHG{margin:0 auto;padding:0 0 40px;max-width:1000px}", ""]);
+exports.push([module.i, "/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\n}\n\n.NotFound-root-3whbd {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.NotFound-container-1BOHG {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  max-width: 1000px;\n}\n", "", {"version":3,"sources":["/home/adnan/codes/tylts/nativescript-app-sync-web/src/routes/notFound/NotFound.css","/home/adnan/codes/tylts/nativescript-app-sync-web/src/components/variables.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;ACPH;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;ADnBD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAoC;CACrC","file":"NotFound.css","sourcesContent":["/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n@import '../../components/variables.css';\n\n.root {\n  padding-left: 20px;\n  padding-right: 20px;\n}\n\n.container {\n  margin: 0 auto;\n  padding: 0 0 40px;\n  max-width: var(--max-content-width);\n}\n","/**\n * React Starter Kit (https://www.reactstarterkit.com/)\n *\n * Copyright © 2014-present Kriasoft, LLC. All rights reserved.\n *\n * This source code is licensed under the MIT license found in the\n * LICENSE.txt file in the root directory of this source tree.\n */\n\n:root {\n  /*\n   * Typography\n   * ======================================================================== */\n\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\n\n  /*\n   * Layout\n   * ======================================================================== */\n\n  --max-content-width: 1000px;\n\n  /*\n   * Media queries breakpoints\n   * ======================================================================== */\n\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\n  --screen-sm-min: 768px;  /* Small screen / tablet */\n  --screen-md-min: 992px;  /* Medium screen / desktop */\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\n}\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
-	"root": "_3whbd",
-	"container": "_1BOHG"
+	"root": "NotFound-root-3whbd",
+	"container": "NotFound-container-1BOHG"
 };
 
 /***/ }),
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "49d04bb9.png";
+module.exports = __webpack_require__.p + "components/Register/NavStep/arrow.png?49d04bb9";
 
 /***/ }),
 /* 94 */

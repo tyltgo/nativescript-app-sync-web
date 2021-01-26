@@ -1,35 +1,35 @@
 {
   "home": {
-    "js": "/assets/home.1d6868fe.chunk.js"
+    "js": "/assets/home.chunk.js"
   },
   "changePassword": {
-    "js": "/assets/changePassword.2c204f28.chunk.js"
+    "js": "/assets/changePassword.chunk.js"
   },
   "accessKeys": {
-    "js": "/assets/accessKeys.5fd86b0e.chunk.js"
+    "js": "/assets/accessKeys.chunk.js"
   },
   "register": {
-    "js": "/assets/register.372cee28.chunk.js"
+    "js": "/assets/register.chunk.js"
   },
   "apps": {
-    "js": "/assets/apps.4e781da7.chunk.js"
+    "js": "/assets/apps.chunk.js"
   },
   "product": {
-    "js": "/assets/product.457a4976.chunk.js"
+    "js": "/assets/product.chunk.js"
   },
   "deployment": {
-    "js": "/assets/deployment.6fb72ccc.chunk.js"
+    "js": "/assets/deployment.chunk.js"
   },
   "login": {
-    "js": "/assets/login.ed5d89ab.chunk.js"
+    "js": "/assets/login.chunk.js"
   },
   "client": {
-    "js": "/assets/client.dfbe018f.js"
+    "js": "/assets/client.js"
   },
   "vendor": {
-    "js": "/assets/vendor.76a3d781.js"
+    "js": "/assets/vendor.js"
   },
   "": {
-    "png": "/assets/49d04bb9.png"
+    "png": "/assets/components/Register/NavStep/arrow.png?49d04bb9"
   }
 }
